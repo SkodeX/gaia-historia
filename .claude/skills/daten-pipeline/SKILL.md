@@ -25,7 +25,15 @@ Endpunkte unten wurden am 2026-10-22 geprüft. Teste neue Abfragen erst mit klei
 - Schritte: 0–750 Ma alle 5–10 Ma, 750–1000 Ma alle 25 Ma; dazwischen im Browser überblenden.
 - Größenbudget: je Zeitpunkt < 60 KB nach Vereinfachung (Douglas-Peucker/Visvalingam, Koordinaten auf 2 Nachkommastellen, als TopoJSON oder quantisiert). Alles zusammen < 5 MB.
 
-## 2. Dino-Fossilfunde – Paleobiology Database (PBDB)
+## 2a. GEBAUT (Phase 2): Fossilien und Silhouetten
+
+- `scripts/lib/gplates.mjs`: gemeinsame Helfer (`download`, `gpml`, `parseGpml`, `PlateLocator` – Punkt→Platte mit Bounding-Box-Vorfilter).
+- `scripts/build-fossils.mjs` (`npm run fossils`, ~6 s): PBDB `occs/list.json?base_name=…&show=coords,class&limit=all` für `Dinosauria^Aves`, `Sauropterygia,Ichthyosauromorpha,Mosasauridae`, `Pterosauria` plus alle Star-Gattungen (in 20er-Gruppen). Gattung aus `gnl`. Dedupliziert je Gattung/0,5°-Zelle/Alter, Platte per `PlateLocator`. Ausgabe `public/data/fossils.json` (~280 KB): `rows` flach je 7 Ints `[lon*10, lat*10, Platte, Platte-seit, eag*10, lag*10, Gattung]`, `genera`, `genusCat` (0 dino, 1 marine, 2 pterosaur, 3 other), `stars` (Star-ID → Gattung). Der Browser rechnet Funde mit der Platte zurück (`src/globe/fossils.ts`) – nicht die PBDB-Paläokoordinaten nutzen.
+- `scripts/build-silhouettes.mjs` (`npm run silhouettes`): PhyloPic-API (`/images?build=<aktuell>&filter_name=<name klein>&embed_items=true`; Build-Nummer von `GET https://api.phylopic.org/`), nur Lizenzen CC0/PDM/BY/BY-SA, Reihenfolge Gattung → `silhouette`-Feld → Gruppen-Ersatz. Speichert `public/data/silhouettes/<id>.svg` + `index.json` (by, license, page, aspect). Bereits vorhandene werden übersprungen (zum Erneuern Eintrag löschen).
+- Beide Skripte laden die Steckbriefe direkt aus `src/content/creatures/*.ts` (Node-Typ-Stripping, daher dort nur `import type`).
+- Wikipedia-Bild + Commons-Lizenz im Browser: `src/lib/wiki.ts`.
+
+## 2. Dino-Fossilfunde – Paleobiology Database (PBDB) (ursprünglicher Plan)
 
 - `https://paleobiodb.org/data1.2/occs/list.json?base_name=Dinosauria&show=paleoloc,coords&pgm=scotese&limit=…` (CORS `*`, Lizenz CC BY 4.0).
 - Kompakte Feldnamen: `tna` Taxonname, `rnk` Rang, `tid` Taxon-ID, `oei` Stufe/Intervall, `eag`/`lag` frühestes/spätestes Alter in Ma, `pla`/`pln` **Paläo-Breite/-Länge** (Modell `pm1`), `lat`/`lng` heutige Position, `cid` Sammlung.

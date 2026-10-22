@@ -16,7 +16,14 @@ Auf dem iPhone: Seite in Safari öffnen → „Teilen“ → „Zum Home-Bildsch
 - **„Wo lag Berlin damals?“:** heutige Städte wandern mit ihren Platten in die Vergangenheit.
 - Die aktuelle Zeit steht in der Adresse (`#/erde?t=66`) und lässt sich teilen.
 
-Geplant: Phase 2 Dinos (inkl. Meeresreptilien), Phase 3 Tiere heute (bedrohte Arten, viele Meerestiere), Phase 4 Menschen (Grenzen über die Zeit, 150 Kriege), Phase 5 Quiz & Feinschliff.
+## Phase 2 „Tierwelt“ (`#/tierwelt`)
+
+- **Echte Fossilfunde als leuchtende Punkte:** rund 30.000 Funde aus der Paleobiology Database (alle Dinosaurier, Meeresreptilien, Flugsaurier und die Urzeit-Stars), an ihrer damaligen Position auf dem Globus. Antippen zeigt Gattung, Alter und heutigen Fundort.
+- **100 Urzeit-Stars mit Steckbrief:** vom Ediacarium über Trilobiten, Riesen-Seeskorpione und Dunkleosteus, Dinosaurier, Ichthyo-, Plesio- und Mosasaurier, Flugsaurier bis zu Megalodon, Urwalen, Säbelzahnkatze und Mammut.
+- **Steckbrief:** Foto/Paleoart (Wikimedia, mit Urheber und Lizenz), Kennzahlen, Größenvergleich mit einem Menschen (PhyloPic-Silhouetten), „Was wir herausgefunden haben“, Fundorte auf dem Globus, „Lebte zur selben Zeit“.
+- **Lexikon** mit Suche und Gruppen, Reiter „Damals“ mit allen Stars, die zur eingestellten Zeit lebten.
+
+Geplant: Phase 3 Tiere heute (bedrohte Arten, viele Meerestiere), Phase 4 Menschen (Grenzen über die Zeit, 150 Kriege), Phase 5 Quiz & Feinschliff.
 
 ## Entwickeln
 

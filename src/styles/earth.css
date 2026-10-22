@@ -5,6 +5,8 @@
 }
 
 .globe-host {
+  /* Eigene Ebene: die Schilder (CSS2D setzt z-index je Objekt) bleiben unter den Panels */
+  isolation: isolate;
   position: absolute;
   inset: 0;
 }

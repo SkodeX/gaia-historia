@@ -18,7 +18,8 @@ Ziel: dieselbe Gewissheit mit möglichst wenig Kontext. Screenshots sind teuer, 
 
 - **Zuerst Text:** `get_page_text` oder `find` für gezielte Elemente. `read_page` nur mit `ref_id`/`depth`, nie den ganzen Baum.
 - **Zustand per JS abfragen** statt hinzusehen, z. B. `document.querySelectorAll('.marker').length`, aktueller Reglerwert, Fehler in `window.__lastError`. Ergebnisse knapp zurückgeben (Zahlen, kurze Arrays), nie ganze Objekte.
-- **Konsole:** `read_console_messages` mit `onlyErrors: true`.
+- **Konsole:** `read_console_messages` mit `onlyErrors: true`. Server-Logs (`preview_logs`) nur mit `search` und `lines: 3` – Vite-Fehler sind riesig und oft alt (vor einer Korrektur entstanden); Zeitstempel prüfen.
+- **Debug-Variablen am `window`** einmal pro Projekt anlegen (eigene Variable pro Wert, nicht in ein Objekt schreiben, das ein anderer Effekt neu setzt) und Bedienung direkt aufrufen, z. B. `__gaia.globe.onPick(lon, lat, 1)` statt Klick-Koordinaten zu raten.
 - **Netz:** `read_network_requests` mit `urlPattern`, Antworttexte nur bei Bedarf.
 - **Screenshots** nur für Optik (Globus, Layout) und dann mit `scale: 0.5`. Für Details lieber `zoom` auf einen Bereich. Mehrere Schritte in einem `browser_batch` bündeln.
 - Handy-Ansicht: `resize_window` mit `preset: "mobile"`, danach wieder `"desktop"`.

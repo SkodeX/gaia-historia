@@ -74,6 +74,13 @@ npm run data       # alle Datenpakete neu erzeugen (scripts/)
   - UI: `TimeBar` (Bänder, Abspielen, Sprungmarken), `InfoPanel` (Zeitalter/Klima & Meer/Ereignisse, Ereigniskarte), `SettingsSheet`, Modus-Umschalter (Tierwelt/Menschen „bald“). Zeit steht in der URL `#/erde?t=<Ma>`.
   - Dev-Port **5174**, Vorschau **4174** (`.claude/launch.json`: `gaia-dev`, `gaia-preview`). three.js liegt im Hauptbundle (~880 KB, gzip 250 KB).
   - Debug: `window.__gaia.globe`.
-- Offen: Code-Lizenz (wichtig vor Phase 4 wegen GPL-Grenzdaten). Nächste Phase: 2 Dinos.
+- 2026-10-23 **Phase 2 „Tierwelt“ fertig** (`#/tierwelt`, gleiche `EarthView` mit `mode='life'`, Zeit bleibt beim Moduswechsel erhalten):
+  - `src/content/creatures/` – `types.ts` (Interface `Creature`), 4 Dateien à 25 Stars (`theropods`, `herbivores`, `sea-air`, `before-after`), `index.ts` (CREATURES, GROUPS mit Farben, DIET/HABITAT/REGION-Texte, `isAlive`, `contemporaries`). Prüfen mit `node scripts/check-creatures.mjs` (IDs, Zeiten, Wikipedia-Titel DE/EN).
+  - `src/globe/fossils.ts` (laden, `fossilsAt`, `sitesOfGenus`, `siteAt`); `Globe.setPoints()` = Leuchtpunkte (ShaderMaterial, additiv), `Globe.onPick(lon, lat, tolDeg)` = Antippen ohne Ziehen.
+  - `src/components/LifePanel.tsx` – Reiter Damals/Lexikon/Zeitalter, `CreatureCard` (Wiki-Bild, Kennzahlen, `SizeCompare` mit CSS-Masken der PhyloPic-SVGs, Fakten, Fundorte, Zeitgenossen), `FossilCard`. Styles in `src/styles/life.css`.
+  - `src/lib/wiki.ts` – Wikipedia-Vorschaubild + Commons-Urheber/Lizenz (URL-Parameter `?utm_…` abschneiden!).
+  - Debug: `window.__gaia.globe`, `window.__gaiaSites` (aktuelle Fundorte).
+  - Inhalte wurden von 4 parallelen Subagenten geschrieben (je 25 Tiere, festes Schema) – bewährtes Muster für Phase 3 (150 Tiere) und Phase 4 (150 Kriege).
+- Offen: Code-Lizenz (wichtig vor Phase 4 wegen GPL-Grenzdaten). Nächste Phase: 3 Tiere heute (bedrohte Arten, viele Meerestiere).
 
 (Nach jeder Phase hier ergänzen: was gebaut ist, Routen, offene Punkte, neue Fallen.)

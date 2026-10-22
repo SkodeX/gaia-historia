@@ -41,7 +41,42 @@ void main() {
   gl_FragColor = vec4(uColor, glow);
 }`;
 
+export interface GlowPoint {
+  lon: number;
+  lat: number;
+  color: string;
+  /** Größe in Bildpunkten bei mittlerem Abstand */
+  size: number;
+}
+
+const POINT_VERTEX = `
+attribute vec3 color;
+attribute float size;
+uniform float uScale;
+varying vec3 vColor;
+void main() {
+  vColor = color;
+  vec4 mv = modelViewMatrix * vec4(position, 1.0);
+  gl_PointSize = size * uScale / -mv.z;
+  gl_Position = projectionMatrix * mv;
+}`;
+
+const POINT_FRAGMENT = `
+varying vec3 vColor;
+void main() {
+  float d = length(gl_PointCoord - 0.5) * 2.0;
+  if (d > 1.0) discard;
+  float core = smoothstep(0.42, 0.18, d);
+  float glow = pow(1.0 - d, 2.2) * 0.75;
+  gl_FragColor = vec4(mix(vColor, vec3(1.0), core * 0.55), max(core, glow));
+}`;
+
 export class Globe {
+  /** Wird beim Antippen der Kugel (ohne Ziehen) mit lon/lat und einer Toleranz in Grad aufgerufen */
+  onPick: ((lon: number, lat: number, tolDeg: number) => void) | null = null;
+  private points: THREE.Points<THREE.BufferGeometry, THREE.ShaderMaterial>;
+  private raycaster = new THREE.Raycaster();
+  private downAt: { x: number; y: number } | null = null;
   readonly canvas: HTMLCanvasElement;
   private renderer: THREE.WebGLRenderer;
   private labels: CSS2DRenderer;
@@ -121,6 +156,39 @@ export class Globe {
 
     this.scene.add(this.makeStars());
 
+    this.points = new THREE.Points(
+      new THREE.BufferGeometry(),
+      new THREE.ShaderMaterial({
+        vertexShader: POINT_VERTEX,
+        fragmentShader: POINT_FRAGMENT,
+        uniforms: { uScale: { value: 3 } },
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      }),
+    );
+    this.points.frustumCulled = false;
+    this.scene.add(this.points);
+
+    // Antippen erkennen: Zeiger kaum bewegt zwischen Drücken und Loslassen
+    const el = this.labels.domElement;
+    el.addEventListener('pointerdown', (e) => {
+      this.downAt = { x: e.clientX, y: e.clientY };
+    });
+    el.addEventListener('pointerup', (e) => {
+      if (!this.downAt || Math.hypot(e.clientX - this.downAt.x, e.clientY - this.downAt.y) > 6) return;
+      this.downAt = null;
+      const rect = el.getBoundingClientRect();
+      const ndc = new THREE.Vector2(((e.clientX - rect.left) / rect.width) * 2 - 1, -((e.clientY - rect.top) / rect.height) * 2 + 1);
+      this.raycaster.setFromCamera(ndc, this.camera);
+      const hit = this.raycaster.intersectObject(this.earth)[0];
+      if (!hit || !this.onPick) return;
+      const p = hit.point.clone().normalize();
+      const lat = Math.asin(p.y) / RAD;
+      const lon = ((Math.atan2(p.z, -p.x) / RAD + 540) % 360) - 180;
+      this.onPick(lon, lat, Math.max(0.6, (this.camera.position.length() - 1) * 1.6));
+    });
+
     this.resizeObserver = new ResizeObserver(() => this.resize());
     this.resizeObserver.observe(host);
     this.resize();
@@ -144,6 +212,7 @@ export class Globe {
     const h = this.host.clientHeight || 1;
     this.renderer.setSize(w, h);
     this.labels.setSize(w, h);
+    this.points.material.uniforms.uScale.value = this.renderer.getPixelRatio() * 2.6;
     this.camera.aspect = w / h;
     // Auf schmalen Bildschirmen weiter weg, damit die Kugel ganz hineinpasst
     this.camera.fov = w < h ? 48 : 35;
@@ -195,6 +264,26 @@ export class Globe {
       }
       obj.position.copy(lonLatToVec3(m.lon, m.lat, 1.005));
     }
+  }
+
+  /** Leuchtende Punkte (z. B. Fossilfunde) knapp über der Oberfläche */
+  setPoints(list: GlowPoint[]) {
+    const pos = new Float32Array(list.length * 3);
+    const col = new Float32Array(list.length * 3);
+    const size = new Float32Array(list.length);
+    const c = new THREE.Color();
+    list.forEach((p, i) => {
+      const v = lonLatToVec3(p.lon, p.lat, 1.004);
+      pos.set([v.x, v.y, v.z], i * 3);
+      c.set(p.color);
+      col.set([c.r, c.g, c.b], i * 3);
+      size[i] = p.size;
+    });
+    const g = this.points.geometry;
+    g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+    g.setAttribute('size', new THREE.BufferAttribute(size, 1));
+    g.computeBoundingSphere();
   }
 
   /** Kamera sanft über einen Ort fliegen */

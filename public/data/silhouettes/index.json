@@ -1,0 +1,709 @@
+{
+ "dickinsonia": {
+  "taxon": "Dickinsonia",
+  "by": "Caleb M. Gordon",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/089629b8-c5a3-4214-8ee7-3160a6341628",
+  "aspect": 1.38
+ },
+ "anomalocaris": {
+  "taxon": "Anomalocaris",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6a83b364-5678-4b39-811c-d468f3248dcf",
+  "aspect": 1.703
+ },
+ "opabinia": {
+  "taxon": "Opabinia",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/dfb89878-9fc7-4c76-9783-252f984bb5ad",
+  "aspect": 1.892
+ },
+ "hallucigenia": {
+  "taxon": "Hallucigenia",
+  "by": "Caleb M. Brown",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/d22339f4-2d2e-42ca-9bec-4c9dfdac2a23",
+  "aspect": 1.736
+ },
+ "olenellus": {
+  "taxon": "Olenellus",
+  "by": "Charles Doolittle Walcott (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/411847f0-d585-42ce-b4c9-682a3b57088f",
+  "aspect": 0.71
+ },
+ "cameroceras": {
+  "taxon": "Nautiloidea",
+  "by": "Antonov",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/8f7c46e0-ed5e-455f-b5ae-68168151d01d",
+  "aspect": 1.829
+ },
+ "jaekelopterus": {
+  "taxon": "Jaekelopterus",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/ea6d0fcc-4cc0-433c-a7e3-e006e4b50b0b",
+  "aspect": 1.782
+ },
+ "dunkleosteus": {
+  "taxon": "Dunkleosteus",
+  "by": "Olof Moleman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/9521072f-2a2f-445c-b5de-a10414663764",
+  "aspect": 1.751
+ },
+ "tiktaalik": {
+  "taxon": "Tiktaalik",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/10a9bdee-2c86-4f13-a8ae-5ff92dbed2a9",
+  "aspect": 5.885
+ },
+ "meganeura": {
+  "taxon": "Meganeura",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/b7b2895c-f9c3-436a-8efa-d80b14fe0918",
+  "aspect": 1.071
+ },
+ "arthropleura": {
+  "taxon": "Arthropleura",
+  "by": "Jun",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/7fd55470-802d-4a0a-9bdd-73e2f828c5a6",
+  "aspect": 4.074
+ },
+ "dimetrodon": {
+  "taxon": "Dimetrodon",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/c5dbbce1-9b2b-4236-a6e3-0d9cd9ab0ff6",
+  "aspect": 1.788
+ },
+ "helicoprion": {
+  "taxon": "Helicoprion",
+  "by": "Olof Moleman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/2dc67937-9756-4639-91d1-77f5d748fe9e",
+  "aspect": 2.389
+ },
+ "lystrosaurus": {
+  "taxon": "Lystrosaurus",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b4b49b73-e13a-4f5b-8fda-2bf6d6dcb1eb",
+  "aspect": 2
+ },
+ "inostrancevia": {
+  "taxon": "Inostrancevia",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/730f5066-4b02-4548-be22-6d683af13d70",
+  "aspect": 2.59
+ },
+ "titanoboa": {
+  "taxon": "Titanoboa",
+  "by": "Nobu Tamura (modified by T. Michael Keesey)",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/beca4a24-33ef-4659-a20f-7d6835703c1c",
+  "aspect": 1.74
+ },
+ "gastornis": {
+  "taxon": "Gastornis",
+  "by": "Colin McElroy (vectorized by Andrew Schwartz)",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/4e08a814-ee4b-4179-a061-e3bd1c1e51da",
+  "aspect": 0.65
+ },
+ "basilosaurus": {
+  "taxon": "Basilosaurus",
+  "by": "Chris Forbes",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b99b9ce4-1b4f-4627-b0a3-f4f7fed4bfd0",
+  "aspect": 5.565
+ },
+ "ambulocetus": {
+  "taxon": "Ambulocetus",
+  "by": "Conty (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/efa0966c-65ca-433e-9e95-e4e18c15c790",
+  "aspect": 3.475
+ },
+ "paraceratherium": {
+  "taxon": "Paraceratherium",
+  "by": "Michael Tripoli",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/0255043a-468a-48e2-8dd6-9bc0d3d668b4",
+  "aspect": 1.605
+ },
+ "megalodon": {
+  "taxon": "Carcharodon",
+  "by": "Russell Engelman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/c50d0750-bd34-4c16-a6d9-d4e46d2b1d48",
+  "aspect": 2.289
+ },
+ "livyatan": {
+  "taxon": "Physeter",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/2756dc6c-79a4-4507-a486-3cc613671a54",
+  "aspect": 4.364
+ },
+ "smilodon": {
+  "taxon": "Smilodon",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/34680fdb-ef6f-424a-8e02-0e42cf0d4efe",
+  "aspect": 1.766
+ },
+ "wollhaarmammut": {
+  "taxon": "Mammuthus",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6f0acd79-1f7d-402f-8679-dc3036b1a504",
+  "aspect": 1.461
+ },
+ "megatherium": {
+  "taxon": "Folivora",
+  "by": "Michael Tripoli",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/afde58bf-878b-46b0-864c-76c2543bcf11",
+  "aspect": 2.296
+ },
+ "plateosaurus": {
+  "taxon": "Plateosaurus",
+  "by": "Olof Moleman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/bc86babf-9c57-4da5-8771-4e9c04ab08bd",
+  "aspect": 2.506
+ },
+ "brachiosaurus": {
+  "taxon": "Brachiosaurus",
+  "by": "Mathew Wedel",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/18f947ce-1c93-4652-8497-bf72f58a3dae",
+  "aspect": 2.194
+ },
+ "giraffatitan": {
+  "taxon": "Giraffatitan",
+  "by": "Mathew Wedel",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/e4129f4f-942e-4c5e-9b81-07542c7b3deb",
+  "aspect": 1.955
+ },
+ "diplodocus": {
+  "taxon": "Diplodocus",
+  "by": "Jagged Fang Designs",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/72f60e5d-9337-4252-a536-8c37f1739541",
+  "aspect": 1.9
+ },
+ "brontosaurus": {
+  "taxon": "Apatosaurus",
+  "by": "Elihu Guzmán Arroyo",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/3308e34b-6962-4f57-9aa3-45e6d1517042",
+  "aspect": 2.003
+ },
+ "argentinosaurus": {
+  "taxon": "Titanosauria",
+  "by": "Cy Marchant",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/f7d45ad0-0d64-4871-a59b-1414a41487dd",
+  "aspect": 2.438
+ },
+ "patagotitan": {
+  "taxon": "Titanosauria",
+  "by": "Cy Marchant",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/f7d45ad0-0d64-4871-a59b-1414a41487dd",
+  "aspect": 2.438
+ },
+ "mamenchisaurus": {
+  "taxon": "Mamenchisaurus",
+  "by": "Scott Hartman",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/50414999-21ad-45fe-bda1-e180bdce5c26",
+  "aspect": 1.854
+ },
+ "dreadnoughtus": {
+  "taxon": "Titanosauria",
+  "by": "Cy Marchant",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/f7d45ad0-0d64-4871-a59b-1414a41487dd",
+  "aspect": 2.438
+ },
+ "amargasaurus": {
+  "taxon": "Dicraeosaurus",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/3f22e916-0cfc-4e9d-922b-7f47f72b8306",
+  "aspect": 3.491
+ },
+ "nigersaurus": {
+  "taxon": "Nigersaurus",
+  "by": "Tasman Dixon",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b3859477-ebbf-4673-82cb-956e5a37a275",
+  "aspect": 1.695
+ },
+ "stegosaurus": {
+  "taxon": "Stegosaurus",
+  "by": "Connor Ashbridge",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/8c4e6e33-bf09-465a-b46d-fdf85fdd7728",
+  "aspect": 2.293
+ },
+ "kentrosaurus": {
+  "taxon": "Kentrosaurus",
+  "by": "Connor Ashbridge",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/a20bb86f-abef-4062-8c71-00a9241afc82",
+  "aspect": 2.758
+ },
+ "ankylosaurus": {
+  "taxon": "Ankylosaurus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/8a8a2525-e97d-4505-8085-7958f8d36137",
+  "aspect": 3.444
+ },
+ "triceratops": {
+  "taxon": "Triceratops",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/075de9e2-1b71-49d3-8d22-9eb2a78248e4",
+  "aspect": 2.116
+ },
+ "protoceratops": {
+  "taxon": "Protoceratops",
+  "by": "Matt Dempsey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/14da9eea-59b1-47f4-a752-b0e7a30d6fa4",
+  "aspect": 2.367
+ },
+ "styracosaurus": {
+  "taxon": "Styracosaurus",
+  "by": "Caleb M. Brown",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/5fcab3ba-54b9-484c-9458-5f559f05c240",
+  "aspect": 2.608
+ },
+ "psittacosaurus": {
+  "taxon": "Psittacosaurus",
+  "by": "Matt Dempsey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b2a24fcc-029f-42e9-a8b6-0ac1af730b8b",
+  "aspect": 2.768
+ },
+ "pachycephalosaurus": {
+  "taxon": "Pachycephalosaurus",
+  "by": "Emily Willoughby",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/dc73bebc-7294-493d-b64a-98addd6ea837",
+  "aspect": 2.699
+ },
+ "parasaurolophus": {
+  "taxon": "Parasaurolophus",
+  "by": "Richard Rich",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ef954cac-604a-4e1f-9b8d-bd92bf3cc3f6",
+  "aspect": 2.349
+ },
+ "edmontosaurus": {
+  "taxon": "Edmontosaurus",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/fb219ea5-5581-4dd8-a668-a600385e2b1d",
+  "aspect": 3.066
+ },
+ "maiasaura": {
+  "taxon": "Maiasaura",
+  "by": "Tasman Dixon",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/e564cbd6-352d-4bb4-804f-697f6e5c4f87",
+  "aspect": 2.579
+ },
+ "iguanodon": {
+  "taxon": "Iguanodon",
+  "by": "Matt Dempsey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/aa1fb8ea-9cfe-429d-9b22-942a224cd74d",
+  "aspect": 2.704
+ },
+ "shantungosaurus": {
+  "taxon": "Edmontosaurus",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/fb219ea5-5581-4dd8-a668-a600385e2b1d",
+  "aspect": 3.066
+ },
+ "heterodontosaurus": {
+  "taxon": "Heterodontosaurus",
+  "by": "TotalDino",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/dc418dda-1a53-4b32-b59b-cd543739afe6",
+  "aspect": 2.965
+ },
+ "ichthyosaurus": {
+  "taxon": "Ichthyosaurus",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/cec71606-f10c-4aef-81df-fdf31d9440a8",
+  "aspect": 3.066
+ },
+ "shonisaurus": {
+  "taxon": "Shonisaurus",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/37684912-714b-473e-9aba-5d48add6c8da",
+  "aspect": 4.021
+ },
+ "ophthalmosaurus": {
+  "taxon": "Ophthalmosaurus",
+  "by": "Russell Engelman (modified from McGowan and Motani 2003)",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/06970367-6deb-419d-a0b5-5a8c64527e68",
+  "aspect": 2.931
+ },
+ "temnodontosaurus": {
+  "taxon": "Temnodontosaurus",
+  "by": "Gareth Monger",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/d974c74c-7c59-47d5-ad8e-80b704579378",
+  "aspect": 3.036
+ },
+ "nothosaurus": {
+  "taxon": "Nothosaurus",
+  "by": "Jonathan Pople",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a490f49e-9d40-4ef7-a0ce-cf89779f5952",
+  "aspect": 3.949
+ },
+ "placodus": {
+  "taxon": "Placodus",
+  "by": "Nobu Tamura (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/18eb61c8-5e23-42ee-9917-cde560ae84dc",
+  "aspect": 4.531
+ },
+ "tanystropheus": {
+  "taxon": "Tanystropheus",
+  "by": "Jonathan Pople",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/addf08da-a3e1-4693-9bb2-edba1ba2293c",
+  "aspect": 1.778
+ },
+ "plesiosaurus": {
+  "taxon": "Plesiosaurus",
+  "by": "Adam Stuart Smith (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/455695a6-3d47-46e6-88e1-70b36eef7859",
+  "aspect": 1.198
+ },
+ "elasmosaurus": {
+  "taxon": "Elasmosaurus",
+  "by": "E. D. Cope (modified by T. Michael Keesey, Michael P. Taylor & Matthew J. Wedel)",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/5719ee67-4bd3-44e9-ba19-2d36ec7e5b30",
+  "aspect": 8.581
+ },
+ "liopleurodon": {
+  "taxon": "Liopleurodon",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/52d69849-6f8c-40dc-8cfb-7f28e1506911",
+  "aspect": 2.37
+ },
+ "kronosaurus": {
+  "taxon": "Kronosaurus",
+  "by": "Dann Pigdon",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/cc9e2603-b8f9-414c-a09b-8b8ae3da6343",
+  "aspect": 3.386
+ },
+ "pliosaurus": {
+  "taxon": "Pliosauridae",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/421e3fc4-176b-4f15-a63b-14933722788c",
+  "aspect": 3.589
+ },
+ "mosasaurus": {
+  "taxon": "Mosasauridae",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/7cebc9af-3379-4c7a-9276-d23c67b50984",
+  "aspect": 1.343
+ },
+ "tylosaurus": {
+  "taxon": "Tylosaurus",
+  "by": "Scott Hartman",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/8ae20f15-d9c1-45ff-a117-77f001b6eb0a",
+  "aspect": 4.385
+ },
+ "archelon": {
+  "taxon": "Archelon",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/84447dd6-0a90-44ac-96d6-8668be2709a4",
+  "aspect": 1.62
+ },
+ "cretoxyrhina": {
+  "taxon": "Cretoxyrhina",
+  "by": "Dmitry Bogdanov (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/b65312ae-91b5-45b1-9553-c192f1000aba",
+  "aspect": 2.419
+ },
+ "xiphactinus": {
+  "taxon": "Ichthyodectiformes",
+  "by": "Jun-Hyeok Jang",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/42a51ccb-36af-4f42-9a74-548e42014dbc",
+  "aspect": 2.119
+ },
+ "sarcosuchus": {
+  "taxon": "Sarcosuchus",
+  "by": "Miguel Hernández",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6b46598c-5abd-4624-b065-3f94716376f9",
+  "aspect": 6.12
+ },
+ "deinosuchus": {
+  "taxon": "Deinosuchus",
+  "by": "Smokeybjb",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/15bcbacd-1d2f-4354-b1cc-e068faa6134e",
+  "aspect": 7.28
+ },
+ "eudimorphodon": {
+  "taxon": "Rhamphorhynchus",
+  "by": "Skye McDavid",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/3a93a745-aff2-4458-9ba2-f84d8256a053",
+  "aspect": 1.617
+ },
+ "dimorphodon": {
+  "taxon": "Dimorphodon",
+  "by": "John Conway",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/a4c37c72-e235-40c0-8ecb-6e567b3d2e1f",
+  "aspect": 2.704
+ },
+ "rhamphorhynchus": {
+  "taxon": "Rhamphorhynchus",
+  "by": "Skye McDavid",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/3a93a745-aff2-4458-9ba2-f84d8256a053",
+  "aspect": 1.617
+ },
+ "pterodactylus": {
+  "taxon": "Pterodactylus",
+  "by": "Julio Garza",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/97ce8bbd-68a1-4185-a23e-59dcad7d7f15",
+  "aspect": 2.093
+ },
+ "pteranodon": {
+  "taxon": "Pteranodon",
+  "by": "Matt Dempsey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/071babce-127c-4e5d-8472-62e17ad1e7e1",
+  "aspect": 2.229
+ },
+ "quetzalcoatlus": {
+  "taxon": "Azhdarchidae",
+  "by": "jack liddle",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/6dd3a0b6-8c58-4205-9f10-45b6686c4cd0",
+  "aspect": 0.788
+ },
+ "tyrannosaurus": {
+  "taxon": "Tyrannosaurus",
+  "by": "Fred Wierum",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/832a47bd-0cd4-4b0e-af7b-db9d7ff81867",
+  "aspect": 1.753
+ },
+ "tarbosaurus": {
+  "taxon": "Tarbosaurus",
+  "by": "Fred Wierum",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/832a47bd-0cd4-4b0e-af7b-db9d7ff81867",
+  "aspect": 1.753
+ },
+ "yutyrannus": {
+  "taxon": "Yutyrannus",
+  "by": "Tasman Dixon",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5770eb59-b382-4867-bdcc-f304eb4f0020",
+  "aspect": 2.863
+ },
+ "allosaurus": {
+  "taxon": "Allosaurus",
+  "by": "Will Toosey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/77061207-c2e3-4c0c-bcba-9e78cde9807d",
+  "aspect": 3.103
+ },
+ "spinosaurus": {
+  "taxon": "Spinosaurus",
+  "by": "Connor Ashbridge",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/b8db44e0-1c99-4256-8c35-61e914af848b",
+  "aspect": 2.569
+ },
+ "baryonyx": {
+  "taxon": "Baryonyx",
+  "by": "Alessio Ciaffi",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/452d28c2-9f32-49c8-8181-392b2aa66d71",
+  "aspect": 2.96
+ },
+ "giganotosaurus": {
+  "taxon": "Giganotosaurus",
+  "by": "Marie-Aimée ALLARD",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a0f796bd-64f5-4533-bf01-b798fa519895",
+  "aspect": 1.455
+ },
+ "carcharodontosaurus": {
+  "taxon": "Carcharodontosaurus",
+  "by": "Tasman Dixon",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/cab8d7d3-8a0f-4d56-b353-3ed5aef77155",
+  "aspect": 2.758
+ },
+ "carnotaurus": {
+  "taxon": "Carnotaurus",
+  "by": "thetruespinofanboi",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/07ac345a-7b69-4f99-a3fd-84b4d08fcd80",
+  "aspect": 2.229
+ },
+ "majungasaurus": {
+  "taxon": "Majungasaurus",
+  "by": "Jaime Headden",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/16326846-ecd5-49a9-b450-176d3f63703e",
+  "aspect": 2.623
+ },
+ "ceratosaurus": {
+  "taxon": "Ceratosaurus",
+  "by": "Marie Aimée ALLARD",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/021a9423-2c69-4c4b-b888-de540a11a928",
+  "aspect": 1.202
+ },
+ "dilophosaurus": {
+  "taxon": "Dilophosaurus",
+  "by": "Marie Aimée ALLARD",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/36b898fe-0812-4832-8e6e-a5b2f26ee113",
+  "aspect": 1.167
+ },
+ "coelophysis": {
+  "taxon": "Coelophysis",
+  "by": "Cy Marchant",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/4bbb9887-c271-4f75-8246-dd78446e0f05",
+  "aspect": 3.213
+ },
+ "herrerasaurus": {
+  "taxon": "Herrerasaurus",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/02991935-372f-47ee-9236-53b5aa300418",
+  "aspect": 3.078
+ },
+ "eoraptor": {
+  "taxon": "Eoraptor",
+  "by": "Marmelad",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/8f3e5723-986f-4f1d-9292-ff041ce176ca",
+  "aspect": 1.534
+ },
+ "megalosaurus": {
+  "taxon": "Megalosaurus",
+  "by": "Tasman Dixon",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/33a7e349-32ff-4f29-94a5-cb23ede45d60",
+  "aspect": 1.718
+ },
+ "velociraptor": {
+  "taxon": "Velociraptor",
+  "by": "Richard Rich",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/8d1c194f-3bf7-4114-a32e-5b895167a017",
+  "aspect": 2.204
+ },
+ "deinonychus": {
+  "taxon": "Deinonychus",
+  "by": "Caleb M. Gordon",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/8cc46088-75b0-40c7-ae8e-8c986277a5f8",
+  "aspect": 1.837
+ },
+ "utahraptor": {
+  "taxon": "Utahraptor",
+  "by": "Emily Willoughby",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/06662a5b-a115-4231-897a-a74570b1320f",
+  "aspect": 2.983
+ },
+ "microraptor": {
+  "taxon": "Microraptor",
+  "by": "Brad McFeeters (vectorized by T. Michael Keesey)",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/90bf7ae5-8653-4dbf-ae36-8854ac711dab",
+  "aspect": 1.444
+ },
+ "archaeopteryx": {
+  "taxon": "Archaeopteryx",
+  "by": "Scott Hartman",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5b18bbbd-516e-40ba-8f2a-3e77aad72230",
+  "aspect": 2.473
+ },
+ "compsognathus": {
+  "taxon": "Compsognathidae",
+  "by": "Marie Aimée ALLARD",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/67970430-fb1c-467e-aab1-1c47cfb6aefc",
+  "aspect": 1.786
+ },
+ "therizinosaurus": {
+  "taxon": "Therizinosaurus",
+  "by": "Martin Kevil",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/2f4b561d-d659-4195-8933-d4ba0203c61c",
+  "aspect": 1.363
+ },
+ "gallimimus": {
+  "taxon": "Ornithomimidae",
+  "by": "Christiana Garros",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b778f21e-0415-4990-b7be-27dc3ce21405",
+  "aspect": 1.595
+ },
+ "oviraptor": {
+  "taxon": "Oviraptoridae",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/101a8c21-5211-4f7f-b083-4f3373095a03",
+  "aspect": 2.229
+ },
+ "human": {
+  "taxon": "Homo sapiens",
+  "by": "T. Michael Keesey",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a146bf1b-c94d-46e1-9cd8-a0ac52a1e0a9",
+  "aspect": 0.496
+ }
+}

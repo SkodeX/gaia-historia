@@ -8,7 +8,7 @@ import { SettingsSheet } from './components/SettingsSheet';
 
 const MODES = [
   { id: 'erde', key: 'mode.earth', icon: Globe2, ready: true },
-  { id: 'tierwelt', key: 'mode.life', icon: PawPrint, ready: false },
+  { id: 'tierwelt', key: 'mode.life', icon: PawPrint, ready: true },
   { id: 'menschen', key: 'mode.humans', icon: Users, ready: false },
 ] as const;
 
@@ -35,7 +35,7 @@ export default function App() {
             <button
               key={m.id}
               className={`mode ${current === m.id ? 'active' : ''}`}
-              onClick={() => (m.ready ? navigate(`/${m.id}`) : setSoon(t(m.key)))}
+              onClick={() => (m.ready ? navigate(`/${m.id}?${window.location.hash.split('?')[1] ?? ''}`) : setSoon(t(m.key)))}
               aria-current={current === m.id ? 'page' : undefined}
             >
               <m.icon size={16} />
@@ -54,7 +54,7 @@ export default function App() {
         </div>
       </header>
 
-      <EarthView />
+      <EarthView mode={current === 'tierwelt' ? 'life' : 'earth'} />
 
       {soon && (
         <div className="toast" role="status" onClick={() => setSoon(null)}>

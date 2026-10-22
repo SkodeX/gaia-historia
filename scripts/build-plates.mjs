@@ -5,35 +5,12 @@
 //   public/data/plates/points.json     – Platten-ID für Orte aus src/content/geo-points.json
 // Der Browser rechnet daraus jede beliebige Zeit selbst aus (Quaternionen-Slerp).
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
-import { unzipSync, gunzipSync, strFromU8 } from 'fflate';
-import { geoArea, geoContains } from 'd3-geo';
+import { download, gpml, parseGpml, text, PlateLocator } from './lib/gplates.mjs';
+import { geoArea } from 'd3-geo';
 
-const MODEL = process.env.PLATE_MODEL ?? 'cao2024';
-const BASE = `https://repo.gplates.org/webdav/pmm/${MODEL}`;
 const OUT = process.env.PLATE_OUT ?? 'public/data/plates';
-const CACHE = `.cache/${MODEL}`;
 const TOLERANCE = 0.08; // Grad, Douglas-Peucker
 const MIN_EXTENT = 0.35; // Grad – kleinere Inseln fallen weg
-
-async function download(name) {
-  const file = `${CACHE}/${name}.zip`;
-  if (!existsSync(file)) {
-    const res = await fetch(`${BASE}/${name}.zip`);
-    if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
-    await mkdir(CACHE, { recursive: true });
-    await writeFile(file, Buffer.from(await res.arrayBuffer()));
-  }
-  return unzipSync(new Uint8Array(await readFile(file)));
-}
-
-const text = (files, ext) =>
-  Object.entries(files)
-    .filter(([n]) => n.endsWith(ext))
-    .map(([, data]) => (ext.endsWith('z') ? strFromU8(gunzipSync(data)) : strFromU8(data)));
-
-// GPML liegt je nach Modell gepackt (.gpmlz) oder als Text (.gpml) vor
-const gpml = (files) => [...text(files, '.gpmlz'), ...text(files, '.gpml')];
 
 // ---------- Rotationen ----------
 function parseRotations(sources) {
@@ -61,36 +38,6 @@ function parseRotations(sources) {
     out[moving] = list.map(([fixed, rows]) => [fixed, rows.sort((a, b) => a[0] - b[0])]);
   }
   return out;
-}
-
-// ---------- GPML ----------
-const timeValue = (s, fallback) => {
-  if (!s) return fallback;
-  if (s.includes('distantPast')) return 99999;
-  if (s.includes('distantFuture')) return -1;
-  const v = Number(s);
-  return Number.isFinite(v) ? v : fallback;
-};
-
-function parseGpml(xml) {
-  const features = [];
-  for (const chunk of xml.split('<gml:featureMember>').slice(1)) {
-    const plate = Number(/<gpml:reconstructionPlateId>[\s\S]*?<gpml:value>(\d+)<\/gpml:value>/.exec(chunk)?.[1]);
-    const begin = timeValue(/<gml:begin>[\s\S]*?<gml:timePosition[^>]*>([^<]+)</.exec(chunk)?.[1], 99999);
-    const end = timeValue(/<gml:end>[\s\S]*?<gml:timePosition[^>]*>([^<]+)</.exec(chunk)?.[1], -1);
-    const rings = [];
-    // Nur Außenringe – Löcher (Seen) sind für den Globus unwichtig
-    const exteriorRe = /<gml:exterior>[\s\S]*?<gml:posList[^>]*>([^<]+)</g;
-    let m;
-    while ((m = exteriorRe.exec(chunk))) {
-      const nums = m[1].trim().split(/\s+/).map(Number);
-      const ring = [];
-      for (let i = 0; i + 1 < nums.length; i += 2) ring.push([nums[i + 1], nums[i]]); // GPML: lat lon
-      rings.push(ring);
-    }
-    if (Number.isFinite(plate) && rings.length) features.push({ plate, begin, end, rings });
-  }
-  return features;
 }
 
 // ---------- Vereinfachen ----------
@@ -160,22 +107,12 @@ for (const f of coastFeatures) {
 }
 
 // Platten-ID für Orte über die statischen Polygone (Punkt-in-Polygon auf der Kugel)
-const statics = parseGpml(gpml(await download('StaticPolygons')).join('\n'));
+const locator = await PlateLocator.load();
 const geoPoints = JSON.parse(await readFile('src/content/geo-points.json', 'utf8')).points;
 const points = {};
 for (const [id, [lat, lon]] of Object.entries(geoPoints)) {
-  // Bei mehreren Treffern das am längsten bestehende Polygon nehmen
-  let best = null;
-  for (const f of statics) {
-    if (f.end > 0) continue;
-    for (const ring of f.rings) {
-      const poly = { type: 'Polygon', coordinates: [ring] };
-      const fixed = geoArea(poly) > 2 * Math.PI ? { type: 'Polygon', coordinates: [[...ring].reverse()] } : poly;
-      if (geoContains(fixed, [lon, lat]) && (!best || f.begin > best.begin)) best = f;
-    }
-  }
-  points[id] = best ? [best.plate, best.begin] : [0, 99999];
-  if (!best) console.warn(`  ! ${id}: keine Platte gefunden`);
+  points[id] = locator.locate(lon, lat) ?? [0, 99999];
+  if (points[id][1] === 99999) console.warn(`  ! ${id}: keine Platte gefunden`);
 }
 
 await mkdir(OUT, { recursive: true });

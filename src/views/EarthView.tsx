@@ -3,13 +3,20 @@ import { useI18n } from '../i18n';
 import { useSettings } from '../state/settings';
 import { TimeBar } from '../components/TimeBar';
 import { InfoPanel } from '../components/InfoPanel';
+import { LifePanel, type PickedFossil } from '../components/LifePanel';
 import { Globe, type Marker } from '../globe/Globe';
 import { loadPlateData, reconstructPoint, type PlateData } from '../globe/data';
 import { atmosphereColor, paintEarth, type Stage } from '../globe/paint';
 import { CAT_COLORS, EVENTS, type EarthEvent } from '../content/events';
 import { CITIES } from '../content/places';
 import geoPoints from '../content/geo-points.json';
-import { maToPos } from '../time/scale';
+import { maToPos, posToMa } from '../time/scale';
+import { fossilsAt, loadFossils, siteAt, sitesOfGenus, type FossilData, type FossilSite } from '../globe/fossils';
+import { CREATURES, groupInfo, isAlive, type Creature } from '../content/creatures';
+
+export type Mode = 'earth' | 'life';
+
+const FOSSIL_COLORS = ['#ffb46b', '#6fc3ff', '#d7a8ff', '#7ee0a1'];
 
 const POINTS = geoPoints.points as unknown as Record<string, [number, number]>;
 
@@ -19,7 +26,7 @@ function readTimeFromHash(): number {
   return q.has('t') && Number.isFinite(v) ? Math.min(4600, Math.max(0, v)) : 150;
 }
 
-export function EarthView() {
+export function EarthView({ mode }: { mode: Mode }) {
   const { t, lang } = useI18n();
   const { settings } = useSettings();
   const hostRef = useRef<HTMLDivElement>(null);
@@ -30,6 +37,13 @@ export function EarthView() {
   const [ma, setMa] = useState(readTimeFromHash);
   const [stage, setStage] = useState<Stage>('reconstruction');
   const [selected, setSelected] = useState<EarthEvent | null>(null);
+  // Tierwelt
+  const [fossils, setFossils] = useState<FossilData | null>(null);
+  const [creature, setCreature] = useState<Creature | null>(null);
+  const [picked, setPicked] = useState<PickedFossil | null>(null);
+  const [highlight, setHighlight] = useState<number | null>(null);
+  const [stats, setStats] = useState({ sites: 0, genera: 0 });
+  const sitesRef = useRef<FossilSite[]>([]);
 
   useEffect(() => {
     const globe = new Globe(hostRef.current!);
@@ -44,6 +58,10 @@ export function EarthView() {
   useEffect(() => {
     loadPlateData().then(setData, () => setFailed(true));
   }, []);
+
+  useEffect(() => {
+    if (mode === 'life' && !fossils) loadFossils().then(setFossils, () => setFailed(true));
+  }, [mode, fossils]);
 
   // Höhe des Zeitreglers als CSS-Variable, damit das Info-Panel auf dem Handy direkt darüber sitzt
   const earthRef = useRef<HTMLDivElement>(null);
@@ -95,7 +113,7 @@ export function EarthView() {
     };
     const pos = maToPos(ma);
     // Vor den Rekonstruktionen gibt es keine echte Geografie, also auch keine Orte
-    if (settings.showEvents && ma <= data.maxAge) {
+    if (mode === 'earth' && settings.showEvents && ma <= data.maxAge) {
       for (const ev of EVENTS) {
         if (!ev.place || Math.abs(maToPos(ev.ma) - pos) > 0.012) continue;
         const [lat, lon] = POINTS[ev.place];
@@ -128,10 +146,107 @@ export function EarthView() {
         list.push({ id: `city-${c.id}`, lon: p[0], lat: p[1], el: e });
       }
     }
+    if (mode === 'life' && fossils && ma <= data.maxAge) {
+      const sites = sitesRef.current;
+      for (const c of CREATURES) {
+        const gi = fossils.stars[c.id];
+        if (gi === undefined || !isAlive(c, ma)) continue;
+        // Ein passender Fund zur aktuellen Zeit, sonst irgendein Fundort der Gattung
+        const hit = sites.find((x) => x.genus === gi);
+        let p: [number, number] | null = hit ? [hit.lon, hit.lat] : null;
+        if (!p) {
+          const any = sitesOfGenus(fossils, gi)[0];
+          p = any ? siteAt(fossils, data, any.k, ma) : null;
+        }
+        if (!p) continue;
+        const e = el(`star-${c.id}`, () => {
+          const b = document.createElement('button');
+          b.className = 'marker star';
+          b.innerHTML = '<span class="star-dot"></span><span class="marker-label"></span>';
+          return b;
+        });
+        e.style.setProperty('--c', groupInfo(c.group).color);
+        e.querySelector('.marker-label')!.textContent = c.name[lang];
+        e.onclick = () => {
+          setPicked(null);
+          setCreature(c);
+        };
+        list.push({ id: `star-${c.id}`, lon: p[0], lat: p[1], el: e });
+      }
+    }
     globe.setMarkers(list);
-  }, [ma, data, lang, settings.showCities, settings.showEvents]);
+  }, [ma, data, lang, settings.showCities, settings.showEvents, mode, fossils, stats]);
+
+  // Fossilfunde als leuchtende Punkte
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe) return;
+    if (mode !== 'life' || !fossils || !data || ma > data.maxAge) {
+      sitesRef.current = [];
+      globe.setPoints([]);
+      setStats({ sites: 0, genera: 0 });
+      return;
+    }
+    // Toleranz passend zur Auflösung des Reglers an dieser Stelle
+    const p = maToPos(ma);
+    const slack = Math.max(0.05, Math.abs(posToMa(Math.max(0, p - 0.003)) - ma));
+    const sites = fossilsAt(fossils, data, ma, slack);
+    sitesRef.current = sites;
+    (window as unknown as { __gaiaSites: FossilSite[] }).__gaiaSites = sites;
+    const starGenera = new Set(Object.values(fossils.stars));
+    globe.setPoints(
+      sites.map((x) => ({
+        lon: x.lon,
+        lat: x.lat,
+        color: x.genus === highlight ? '#fff2c4' : FOSSIL_COLORS[fossils.genusCat[x.genus]] ?? FOSSIL_COLORS[3],
+        size: x.genus === highlight ? 22 : starGenera.has(x.genus) ? 11 : 7,
+      })),
+    );
+    setStats({ sites: sites.length, genera: new Set(sites.map((x) => x.genus)).size });
+  }, [mode, fossils, data, ma, highlight]);
+
+  // Antippen eines Fundpunkts
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe) return;
+    globe.onPick =
+      mode === 'life' && fossils
+        ? (lon, lat, tol) => {
+            const d = (x: FossilSite) => Math.hypot((((x.lon - lon + 540) % 360) - 180) * Math.cos((lat * Math.PI) / 180), x.lat - lat);
+            const near = sitesRef.current.filter((x) => d(x) < tol).sort((a, b) => d(a) - d(b));
+            if (!near.length) return;
+            const x = near[0];
+            setCreature(null);
+            setPicked({ genus: fossils.genera[x.genus], eag: x.eag, lag: x.lag, lon0: x.lon0, lat0: x.lat0, count: near.length });
+          }
+        : null;
+  }, [mode, fossils]);
 
   const jump = useCallback((m: number) => setMa(m), []);
+  const showSites = useCallback(
+    (c: Creature) => {
+      if (!fossils || !data) return;
+      const gi = fossils.stars[c.id];
+      if (gi === undefined) return;
+      setHighlight(gi);
+      const target = isAlive(c, ma) ? ma : (c.from + c.to) / 2;
+      setMa(target);
+      const first = sitesOfGenus(fossils, gi)[0];
+      const p = first && siteAt(fossils, data, first.k, Math.min(target, data.maxAge));
+      if (p) globeRef.current?.flyTo(p[0], p[1]);
+    },
+    [fossils, data, ma],
+  );
+  const hasSites = useCallback((c: Creature) => fossils?.stars[c.id] !== undefined, [fossils]);
+  const selectCreature = useCallback(
+    (c: Creature | null) => {
+      setPicked(null);
+      setCreature(c);
+      if (!c) setHighlight(null);
+      else if (fossils?.stars[c.id] !== undefined) setHighlight(fossils.stars[c.id]);
+    },
+    [fossils],
+  );
   const locate = useCallback(
     (ev: EarthEvent) => {
       if (!ev.place || !data) return;
@@ -150,7 +265,22 @@ export function EarthView() {
       <div className="globe-note">
         {failed ? t('globe.error') : !data ? t('globe.loading') : stage === 'reconstruction' ? t('globe.reconstruction') : t('globe.schematic')}
       </div>
-      <InfoPanel ma={ma} selected={selected} onSelect={setSelected} onJump={jump} onLocate={locate} />
+      {mode === 'earth' ? (
+        <InfoPanel ma={ma} selected={selected} onSelect={setSelected} onJump={jump} onLocate={locate} />
+      ) : (
+        <LifePanel
+          ma={ma}
+          siteCount={stats.sites}
+          generaCount={stats.genera}
+          selected={creature}
+          fossil={picked}
+          onSelect={selectCreature}
+          onFossilClose={() => setPicked(null)}
+          onJump={jump}
+          onShowSites={showSites}
+          hasSites={hasSites}
+        />
+      )}
       <TimeBar ma={ma} onChange={setMa} />
     </div>
   );

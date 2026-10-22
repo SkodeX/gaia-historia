@@ -69,7 +69,7 @@ export function InfoPanel({
   );
 }
 
-function AgeTab({ ma }: { ma: number }) {
+export function AgeTab({ ma }: { ma: number }) {
   const { lang } = useI18n();
   const u = unitsAt(ma);
   const main = [u.period, u.era, u.eon].find((x) => x?.text);

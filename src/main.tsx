@@ -5,6 +5,7 @@ import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
 import './styles/base.css';
 import './styles/earth.css';
+import './styles/life.css';
 import { SettingsProvider } from './state/settings';
 import App from './App';
 
