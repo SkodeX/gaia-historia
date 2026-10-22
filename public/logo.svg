@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="sea" cx="38%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#3f8fd0"/>
+      <stop offset="0.6" stop-color="#14467e"/>
+      <stop offset="1" stop-color="#081a35"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0.78" stop-color="#ffb46b" stop-opacity="0"/>
+      <stop offset="0.9" stop-color="#ffb46b" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffb46b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ball"><circle cx="256" cy="256" r="168"/></clipPath>
+  </defs>
+  <rect width="512" height="512" fill="#06080d"/>
+  <circle cx="256" cy="256" r="236" fill="url(#glow)"/>
+  <circle cx="256" cy="256" r="168" fill="url(#sea)"/>
+  <g clip-path="url(#ball)">
+    <!-- Pangaea-artige Landmasse -->
+    <path d="M150 150c40-30 95-20 120 5 20 20 55 10 85 30 25 17 30 55 10 80-15 20-50 22-62 45-14 27-5 60-35 78-30 18-70 0-80-30-9-27-40-35-55-60-16-27-18-62-8-88 6-24 3-45 25-60z" fill="#5f8a4b"/>
+    <path d="M185 190c25-12 55-6 70 12 12 15 4 38-16 44-22 7-50-2-60-20-8-14-6-29 6-36z" fill="#b99b63" opacity="0.85"/>
+    <path d="M300 330c18-6 35 4 38 18 3 15-9 28-25 28-17 0-29-12-27-26 1-9 6-17 14-20z" fill="#5f8a4b"/>
+  </g>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#ffd59a" stroke-opacity="0.35" stroke-width="3"/>
+  <!-- Zeitring -->
+  <circle cx="256" cy="256" r="206" fill="none" stroke="#ffd59a" stroke-width="8" stroke-dasharray="40 18" stroke-linecap="round" opacity="0.8"/>
+</svg>

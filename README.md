@@ -1,0 +1,48 @@
+# Gaia Historia
+
+Die Geschichte der Erde auf einem 3D-Globus – von der Entstehung vor 4,6 Milliarden Jahren bis heute. Als installierbare Web-App (PWA), auf Deutsch und Englisch.
+
+**Live:** https://skodex.github.io/gaia-historia/
+
+Auf dem iPhone: Seite in Safari öffnen → „Teilen“ → „Zum Home-Bildschirm“.
+
+## Phase 1 „Erde“
+
+- **Wandernde Kontinente:** Die Platten werden im Browser für jeden beliebigen Zeitpunkt der letzten 1,8 Milliarden Jahre aus dem Plattenmodell von Cao et al. (2024) zurückgerechnet – flüssig, ohne Sprünge. Davor künstlerische Stadien: Magma-Ozean, Urozean, erste Kratone.
+- **Zeitregler** mit den offiziellen Farben der Erdzeitalter, Abspielen, Sprungmarken und zwei Schwerpunkten mit viel Platz: Dino-Zeit (252–66 Mio. Jahre) und Neuzeit (1000 n. Chr. bis heute, jahrgenau).
+- **Erdzeitalter:** Äonen, Ären, Perioden sowie Pleistozän, Holozän und Epochen der Neuzeit mit kurzen Erklärungen.
+- **Ereignisse:** rund 60 Meilensteine – Mondentstehung, erstes Leben, Sauerstoffkatastrophe, Schneeball-Erde, Massenaussterben, Asteroid, Eiszeit, Vulkanausbrüche, Keeling-Kurve … – als Markierungen am damaligen Ort.
+- **Klima & Meer:** Temperatur, CO₂ und Meeresspiegel über die ganze Erdgeschichte; Polareis, Schelfgebiete und Vegetation färben den Globus passend ein.
+- **„Wo lag Berlin damals?“:** heutige Städte wandern mit ihren Platten in die Vergangenheit.
+- Die aktuelle Zeit steht in der Adresse (`#/erde?t=66`) und lässt sich teilen.
+
+Geplant: Phase 2 Dinos (inkl. Meeresreptilien), Phase 3 Tiere heute (bedrohte Arten, viele Meerestiere), Phase 4 Menschen (Grenzen über die Zeit, 150 Kriege), Phase 5 Quiz & Feinschliff.
+
+## Entwickeln
+
+```bash
+npm install
+npm run dev        # http://localhost:5174
+npm run typecheck
+npm run build      # nach dist/
+npm run data       # Plattenmodell neu laden und public/data/plates/ erzeugen
+npm run icons      # App-Icons aus public/logo.svg
+```
+
+Jeder Push auf `main` baut die App per GitHub Actions und veröffentlicht sie auf GitHub Pages. Die Datenpakete liegen im Repo; `npm run data` lädt das Plattenmodell (≈ 5 MB) nach `.cache/` und erzeugt sie neu.
+
+## Aufbau
+
+| Ordner | Inhalt |
+| --- | --- |
+| `src/globe/` | Plattenrekonstruktion (Quaternionen), Bemalung der Erdoberfläche, three.js-Globus |
+| `src/time/` | Zeitregler-Skala, Erdzeitalter (ICS), Zeitformate |
+| `src/content/` | Ereignisse, Klimadaten, Orte |
+| `src/components/`, `src/views/` | Oberfläche |
+| `scripts/` | Datenaufbereitung |
+| `public/data/` | Erzeugte Datenpakete |
+| `.claude/` | Projektwissen für Claude Code (Skills) |
+
+## Quellen
+
+Siehe [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
