@@ -68,10 +68,19 @@ async function findImage(name) {
 let wantTall = false;
 
 const creatures = await loadCreatures();
+// Heutige Arten (Phase 3): Art, dann Gattung – kein Gruppen-Ersatz, lieber gar keine als eine falsche Silhouette
+const species = [];
+for (const f of await readdir('src/content/species')) {
+  if (!f.endsWith('.ts') || f === 'types.ts' || f === 'index.ts') continue;
+  const mod = await import(pathToFileURL(`src/content/species/${f}`).href);
+  for (const v of Object.values(mod)) if (Array.isArray(v)) species.push(...v);
+}
 await mkdir(OUT, { recursive: true });
 const indexFile = `${OUT}/index.json`;
 const index = existsSync(indexFile) ? JSON.parse(await readFile(indexFile, 'utf8')) : {};
-const wanted = [{ id: 'human', names: ['Homo sapiens'] }, ...creatures.map((c) => ({ id: c.id, names: [c.pbdb ?? c.genus, c.silhouette, ...(OVERRIDES[c.id] ?? []), GROUP_FALLBACK[c.group]].filter(Boolean) }))];
+const wanted = [{ id: 'human', names: ['Homo sapiens'] }, ...creatures.map((c) => ({ id: c.id, names: [c.pbdb ?? c.genus, c.silhouette, ...(OVERRIDES[c.id] ?? []), GROUP_FALLBACK[c.group]].filter(Boolean) })),
+  ...species.map((s) => ({ id: `sp-${s.id}`, names: [s.gbif ?? s.sci, (s.gbif ?? s.sci).split(" ")[0], ...(OVERRIDES[`sp-${s.id}`] ?? [])] })),
+];
 
 for (const w of wanted) {
   if (index[w.id] && existsSync(`${OUT}/${w.id}.svg`)) continue;

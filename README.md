@@ -23,7 +23,14 @@ Auf dem iPhone: Seite in Safari öffnen → „Teilen“ → „Zum Home-Bildsch
 - **Steckbrief:** Foto/Paleoart (Wikimedia, mit Urheber und Lizenz), Kennzahlen, Größenvergleich mit einem Menschen (PhyloPic-Silhouetten), „Was wir herausgefunden haben“, Fundorte auf dem Globus, „Lebte zur selben Zeit“.
 - **Lexikon** mit Suche und Gruppen, Reiter „Damals“ mit allen Stars, die zur eingestellten Zeit lebten.
 
-Geplant: Phase 3 Tiere heute (bedrohte Arten, viele Meerestiere), Phase 4 Menschen (Grenzen über die Zeit, 150 Kriege), Phase 5 Quiz & Feinschliff.
+## Phase 3 „Tiere heute“
+
+- Zieh den Regler in die Neuzeit (ab 1000 n. Chr.): Die Tierwelt zeigt dann **170 heutige und in der Neuzeit ausgestorbene Arten** statt Fossilien – rund die Hälfte Meerestiere (Orca, Hammerhaie, Walhai, Mantas, Meeresschildkröten, Korallen, Pinguine …).
+- **Leuchtende Verbreitungsgebiete** aus echten Sichtungen (GBIF) und Fachliteratur.
+- **Steckbrief:** Rote-Liste-Status, Bestand und Trend, Größenvergleich, Besonderheiten, was sie bedroht, was hilft (Schutzerfolge und was jede/r tun kann) und ihre Verwandten aus der Urzeit (z. B. Weißer Hai ↔ Megalodon, Lederschildkröte ↔ Archelon).
+- **Ausgestorben in der Neuzeit:** Dodo, Stellers Seekuh, Riesenalk, Beutelwolf, Wandertaube … – sie tauchen auf dem Globus auf, solange der Regler vor ihrem letzten Nachweis steht.
+
+Geplant: Phase 4 Menschen (Grenzen über die Zeit, 150 Kriege), Phase 5 Quiz & Feinschliff.
 
 ## Entwickeln
 

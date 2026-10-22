@@ -705,5 +705,1076 @@
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "page": "https://www.phylopic.org/images/a146bf1b-c94d-46e1-9cd8-a0ac52a1e0a9",
   "aspect": 0.496
+ },
+ "sp-kalifornischer-kondor": {
+  "taxon": "Gymnogyps californianus",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/4d8c62f3-f57e-45e7-85e2-8cb9265e62d8",
+  "aspect": 3.802
+ },
+ "sp-waldrapp": {
+  "taxon": "Geronticus eremita",
+  "by": "Matthew Speight",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/3bb0928f-f9d2-4163-b0ce-7a1b58e3a47a",
+  "aspect": 1.275
+ },
+ "sp-spix-ara": {
+  "taxon": "Cyanopsitta spixii",
+  "by": "Sharon Wegner-Larsen",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/34d9872c-b7d0-416f-8ac6-1f9f952982c8",
+  "aspect": 1.016
+ },
+ "sp-hyazinth-ara": {
+  "taxon": "Anodorhynchus hyacinthinus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/0e752edb-ec92-4f5e-b988-2b22566a196e",
+  "aspect": 0.464
+ },
+ "sp-schuhschnabel": {
+  "taxon": "Balaeniceps rex",
+  "by": "Tom Tarrant (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/93851bd5-c8fd-4e56-a193-235611066cde",
+  "aspect": 0.977
+ },
+ "sp-suedlicher-hornrabe": {
+  "taxon": "Bucorvus leadbeateri",
+  "by": "Gordon E. Robertson",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/a8018e40-5257-4ad5-a42e-6fbad115deab",
+  "aspect": 1.193
+ },
+ "sp-steppenadler": {
+  "taxon": "Aquila nipalensis",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/c9f94d9a-2e84-4d27-a4fd-ee4ae9b94ff6",
+  "aspect": 0.867
+ },
+ "sp-streifenkiwi": {
+  "taxon": "Apteryx",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/875bfb7c-99de-4140-bf6b-ce979c8bff06",
+  "aspect": 1.545
+ },
+ "sp-schneeeule": {
+  "taxon": "Bubo scandiacus",
+  "by": "Steven Traver",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/919a6f91-cb0b-4646-9ec2-b6a8b5e4b024",
+  "aspect": 1.452
+ },
+ "sp-komodowaran": {
+  "taxon": "Varanus komodoensis",
+  "by": "Steven Traver",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ce6a78bc-3ef1-4d60-ab40-113eb84c7802",
+  "aspect": 1.826
+ },
+ "sp-gangesgavial": {
+  "taxon": "Gavialis gangeticus",
+  "by": "Jagged Fang Designs",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f963f388-8297-4ceb-91f6-493b38dccba5",
+  "aspect": 7.144
+ },
+ "sp-orinoko-krokodil": {
+  "taxon": "Crocodylus",
+  "by": "Matthew Speight",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/00fe034c-1703-4705-b9c8-8910afee38ff",
+  "aspect": 5.172
+ },
+ "sp-philippinen-krokodil": {
+  "taxon": "Crocodylus",
+  "by": "Matthew Speight",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/00fe034c-1703-4705-b9c8-8910afee38ff",
+  "aspect": 5.172
+ },
+ "sp-china-alligator": {
+  "taxon": "Alligator sinensis",
+  "by": "Wani2Y",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/fddc8b3c-20a3-4e7b-8c9c-be62e52aa2ab",
+  "aspect": 2.399
+ },
+ "sp-galapagos-riesenschildkroete": {
+  "taxon": "Chelonoidis",
+  "by": "Kai Caspar",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/760cced8-4303-49b4-bc4c-bf74ec652304",
+  "aspect": 1.437
+ },
+ "sp-brueckenechse": {
+  "taxon": "Sphenodon punctatus",
+  "by": "Beth Reinke",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/9f520fca-0497-40f6-9bc3-6fc03cd47e57",
+  "aspect": 1.716
+ },
+ "sp-axolotl": {
+  "taxon": "Ambystoma mexicanum",
+  "by": "Chuanixn Yu",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/99c89d19-488d-496a-9fb9-cf4f76da7297",
+  "aspect": 1.377
+ },
+ "sp-chinesischer-riesensalamander": {
+  "taxon": "Andrias davidianus",
+  "by": "Chuanixn Yu",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/dd44eb4f-f4d1-4557-939e-44f35694b615",
+  "aspect": 1.503
+ },
+ "sp-grottenolm": {
+  "taxon": "Proteus anguinus",
+  "by": "Jose Carlos Arenas-Monroy",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/05497054-f1a2-47b7-945c-ac5ee871b895",
+  "aspect": 1.982
+ },
+ "sp-goldfroeschchen": {
+  "taxon": "Mantella",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/1c7da9c7-f5eb-44c0-972d-b5fcffee6400",
+  "aspect": 1.445
+ },
+ "sp-amazonasdelfin": {
+  "taxon": "Inia geoffrensis",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/4b39bbf1-f37f-4d62-a2ad-1504772ba851",
+  "aspect": 2.948
+ },
+ "sp-gangesdelfin": {
+  "taxon": "Platanista gangetica",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/a55581b9-72c9-4ede-8fba-b908b08d94c9",
+  "aspect": 3.368
+ },
+ "sp-jangtse-glattschweinswal": {
+  "taxon": "Neophocaena asiaeorientalis",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/38a3d150-6afb-4c2d-9941-7089fb434ab7",
+  "aspect": 3.141
+ },
+ "sp-hausen": {
+  "taxon": "Huso huso",
+  "by": "Robbie Cada",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/cd7e54b4-aff4-48c8-9159-c8977ff07717",
+  "aspect": 4.491
+ },
+ "sp-chinesischer-stoer": {
+  "taxon": "Acipenser",
+  "by": "Duane Raver/USFWS",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/5ce55e7c-827d-4049-b128-ae0bc8fb2981",
+  "aspect": 4.531
+ },
+ "sp-flussperlmuschel": {
+  "taxon": "Margaritifera",
+  "by": "Filippo Nicolini",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/91792b0c-5d03-4098-943a-379f9db80d83",
+  "aspect": 2.016
+ },
+ "sp-monarchfalter": {
+  "taxon": "Danaus plexippus",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/e2cdafc4-2e97-45e3-8799-1a965fc24d85",
+  "aspect": 1.736
+ },
+ "sp-rostbraune-hummel": {
+  "taxon": "Bombus",
+  "by": "Arnstein Staverløkk/Norsk institutt for naturforskning",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/048ef28b-12b9-4dcd-9899-fbe7b15deeee",
+  "aspect": 1.356
+ },
+ "sp-dodo": {
+  "taxon": "Raphus cucullatus",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/1ad4b1d5-029c-4b63-9f79-b26b6b7c7a14",
+  "aspect": 0.758
+ },
+ "sp-stellers-seekuh": {
+  "taxon": "Hydrodamalis gigas",
+  "by": "Michael Tripoli",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/e1a2c2cb-fd60-4ec6-807d-a68ccfee6863",
+  "aspect": 5.505
+ },
+ "sp-riesenalk": {
+  "taxon": "Pinguinus impennis",
+  "by": "John James Audubon (Modified)",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/1eb2195d-8035-4d59-bfe2-ee7af9ca0132",
+  "aspect": 0.876
+ },
+ "sp-beutelwolf": {
+  "taxon": "Thylacinus cynocephalus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/47f44ce1-7847-4f52-a8fd-c27506f39d20",
+  "aspect": 2.259
+ },
+ "sp-quagga": {
+  "taxon": "Equus quagga quagga",
+  "by": "Zimices",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a31e7527-3203-4233-b0da-c415cc7d1664",
+  "aspect": 1.365
+ },
+ "sp-auerochse": {
+  "taxon": "Bos primigenius",
+  "by": "Ivan Iofrida",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/0ebe16cb-4c74-4c77-9643-9e531a0840cc",
+  "aspect": 1.574
+ },
+ "sp-riesenmoa": {
+  "taxon": "Dinornis robustus",
+  "by": "Scott Hartman",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/d45a1d35-a7b3-4a55-a927-25187c555a3d",
+  "aspect": 1.563
+ },
+ "sp-haastadler": {
+  "taxon": "Hieraaetus",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f133b189-620f-4478-aec6-6f7a2c801bcc",
+  "aspect": 2.494
+ },
+ "sp-madagaskar-strauss": {
+  "taxon": "Aepyornis maximus",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/fe387db8-6863-4898-be7c-4a6c001e186f",
+  "aspect": 0.8
+ },
+ "sp-karibische-moenchsrobbe": {
+  "taxon": "Neomonachus tropicalis",
+  "by": "Zimices",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/dcc27b9e-1bdc-4178-ade9-30a3d20c9806",
+  "aspect": 3.889
+ },
+ "sp-japanischer-seeloewe": {
+  "taxon": "Zalophus japonicus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6b7f24dc-6525-4263-b480-6f93f9a7a31d",
+  "aspect": 4.01
+ },
+ "sp-goldkroete": {
+  "taxon": "Incilius",
+  "by": "Jose Carlos Arenas-Monroy",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ec29cbcc-8a65-41fd-adb0-80f52554e242",
+  "aspect": 1.188
+ },
+ "sp-baiji": {
+  "taxon": "Lipotes vexillifer",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/0cbba297-38c8-419e-8ba3-e783619c354f",
+  "aspect": 3.452
+ },
+ "sp-westliches-spitzmaulnashorn": {
+  "taxon": "Diceros",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/0f140008-ea45-48a8-b868-9235db6fbddb",
+  "aspect": 2.016
+ },
+ "sp-pyrenaeen-steinbock": {
+  "taxon": "Capra",
+  "by": "Kai Caspar",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/8a78f168-49fc-446a-9be4-5fc54e78074e",
+  "aspect": 1.266
+ },
+ "sp-schomburgk-hirsch": {
+  "taxon": "Rucervus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/b156cc5b-3c1b-4c10-9de8-dfa9b6840f1a",
+  "aspect": 1.228
+ },
+ "sp-afrikanischer-elefant": {
+  "taxon": "Loxodonta africana",
+  "by": "Natalie Kestel",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/b98f5417-9fa3-400f-b389-4bf1a961cce3",
+  "aspect": 1.519
+ },
+ "sp-waldelefant": {
+  "taxon": "Loxodonta cyclotis",
+  "by": "Evan Hockridge",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/0489d246-d871-494d-987f-7c735a9a8bc0",
+  "aspect": 1.6
+ },
+ "sp-asiatischer-elefant": {
+  "taxon": "Elephas maximus",
+  "by": "Kai Caspar",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/91e44407-08f2-4b96-b8a6-ab4ce6d4d38d",
+  "aspect": 1.401
+ },
+ "sp-spitzmaulnashorn": {
+  "taxon": "Diceros bicornis",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/0f140008-ea45-48a8-b868-9235db6fbddb",
+  "aspect": 2.016
+ },
+ "sp-breitmaulnashorn": {
+  "taxon": "Ceratotherium simum",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/55b24c01-3552-4c09-a485-087e4d2c4889",
+  "aspect": 2.341
+ },
+ "sp-panzernashorn": {
+  "taxon": "Rhinoceros unicornis",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ed67acfc-c0aa-44cb-a3d4-b209e9641f8f",
+  "aspect": 1.732
+ },
+ "sp-sumatra-nashorn": {
+  "taxon": "Dicerorhinus sumatrensis",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/b588650a-14a7-4b32-9010-f0383b07131b",
+  "aspect": 1.703
+ },
+ "sp-java-nashorn": {
+  "taxon": "Rhinoceros",
+  "by": "Christophe Mallet",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ed67acfc-c0aa-44cb-a3d4-b209e9641f8f",
+  "aspect": 1.732
+ },
+ "sp-tiger": {
+  "taxon": "Panthera tigris",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/2d866913-d59f-4e48-93d8-19a0ce8201cb",
+  "aspect": 2.185
+ },
+ "sp-loewe": {
+  "taxon": "Panthera leo",
+  "by": "Natalie Kestel",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/54a08780-e059-411e-86d4-f3bd637d3e6f",
+  "aspect": 1.736
+ },
+ "sp-gepard": {
+  "taxon": "Acinonyx jubatus",
+  "by": "Matthew Speight",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/1b25ddef-22f8-467e-a8b1-0846bcba9b3b",
+  "aspect": 2.442
+ },
+ "sp-leopard": {
+  "taxon": "Panthera pardus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2",
+  "aspect": 2.003
+ },
+ "sp-schneeleopard": {
+  "taxon": "Panthera uncia",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/cb44ff49-165e-4c97-9a94-98f512dda64f",
+  "aspect": 2.233
+ },
+ "sp-jaguar": {
+  "taxon": "Panthera onca",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/c5362c8a-0c93-41f5-9d4d-674dbe231318",
+  "aspect": 1.518
+ },
+ "sp-pardelluchs": {
+  "taxon": "Lynx pardinus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/b2656d2a-6366-4186-9f75-b9b0a28596b7",
+  "aspect": 1.175
+ },
+ "sp-grosser-panda": {
+  "taxon": "Ailuropoda melanoleuca",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/887ea34b-b62a-4126-9e98-434d6000dd0c",
+  "aspect": 1.451
+ },
+ "sp-malaienbaer": {
+  "taxon": "Helarctos malayanus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/2c3d1594-8616-4531-b229-c67509c17b2a",
+  "aspect": 1.538
+ },
+ "sp-berggorilla": {
+  "taxon": "Gorilla",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/dd10acd5-fef8-41b4-b7af-fd8f651cc8b3",
+  "aspect": 0.909
+ },
+ "sp-westlicher-flachlandgorilla": {
+  "taxon": "Gorilla gorilla gorilla",
+  "by": "T. Michael Keesey (after Colin M. L. Burnett)",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e",
+  "aspect": 1.109
+ },
+ "sp-bonobo": {
+  "taxon": "Pan paniscus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/9cc16c5e-cba4-43ce-93d2-0e042139dcd2",
+  "aspect": 1.438
+ },
+ "sp-schimpanse": {
+  "taxon": "Pan troglodytes",
+  "by": "Kai R. Caspar",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/34f93016-ee49-428c-8504-c7c4739232bc",
+  "aspect": 1.081
+ },
+ "sp-sumatra-orang-utan": {
+  "taxon": "Pongo abelii",
+  "by": "Gareth Monger",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/67144c22-93c2-4dc0-ba13-9f9dd2d223b9",
+  "aspect": 0.68
+ },
+ "sp-tapanuli-orang-utan": {
+  "taxon": "Pongo tapanuliensis",
+  "by": "based on video by Orangutan Outreach (youtube.com/watch?v=bWd1A9AWtWo)",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/ec1100d2-9014-40e1-82cb-a6c412e65c78",
+  "aspect": 0.855
+ },
+ "sp-borneo-orang-utan": {
+  "taxon": "Pongo pygmaeus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90",
+  "aspect": 0.542
+ },
+ "sp-katta": {
+  "taxon": "Lemur catta",
+  "by": "Natalie Kestel",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/c8aeba86-0838-4c2e-8a3c-512608a2656c",
+  "aspect": 1.481
+ },
+ "sp-fingertier": {
+  "taxon": "Daubentonia madagascariensis",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/bb5ccfea-39a0-48de-b5ed-d55ed5b48ed0",
+  "aspect": 1.236
+ },
+ "sp-okapi": {
+  "taxon": "Okapia johnstoni",
+  "by": "T. Michael Keesey",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/44eea793-5a86-4801-ac56-0962e62491d8",
+  "aspect": 1.497
+ },
+ "sp-netzgiraffe": {
+  "taxon": "Giraffa reticulata",
+  "by": "David M. Brown, Rick A. Brenneman, Klaus-Peter Koepfli, John P. Pollinger, Borja Milá, Nicholas J. Georgiadis, Edward E. Louis Jr., Gregory F. Grether, David K. Jacobs & Robert K. Wayne",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/1c943022-99b4-47dc-b87c-af3fd705d78f",
+  "aspect": 1.351
+ },
+ "sp-grevyzebra": {
+  "taxon": "Equus grevyi",
+  "by": "Kai Caspar",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6f55522e-264a-430a-9d52-f14c31055f3c",
+  "aspect": 1.023
+ },
+ "sp-bergtapir": {
+  "taxon": "Tapirus pinchaque",
+  "by": "Steven Traver",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/8f6b8802-52f9-4f16-8429-0b86ea4a4aa8",
+  "aspect": 1.749
+ },
+ "sp-afrikanischer-wildhund": {
+  "taxon": "Lycaon pictus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/41e86fdc-c817-4262-9cdf-e18c6b8053c4",
+  "aspect": 0.567
+ },
+ "sp-aethiopischer-wolf": {
+  "taxon": "Canis simensis",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/96adba97-2fad-4d87-89f3-63ec358dd038",
+  "aspect": 1.682
+ },
+ "sp-rotwolf": {
+  "taxon": "Canis rufus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f0c6c94e-9d13-427c-82e6-5687a97aab08",
+  "aspect": 1.515
+ },
+ "sp-koala": {
+  "taxon": "Phascolarctos cinereus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5cd33aab-9669-4550-988c-f3f482b97abd",
+  "aspect": 0.848
+ },
+ "sp-beutelteufel": {
+  "taxon": "Sarcophilus harrisii",
+  "by": "Kawinwit Kittipalawattanapol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/456e4fbb-a17f-4e69-b8f4-50528e92dd9a",
+  "aspect": 1.896
+ },
+ "sp-chinesisches-schuppentier": {
+  "taxon": "Manis",
+  "by": "Steven Traver",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f628f6fe-6e2d-4173-a20f-265dc7d2d04f",
+  "aspect": 3.154
+ },
+ "sp-riesenguerteltier": {
+  "taxon": "Priodontes maximus",
+  "by": "Celeste Luna",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/05351855-f406-47c8-b11b-9d38d681bb8b",
+  "aspect": 1.83
+ },
+ "sp-wisent": {
+  "taxon": "Bison bonasus",
+  "by": "Steven Traver",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/3d1dc9ef-d190-4b54-86f5-4ad6f2c4b3a7",
+  "aspect": 1.577
+ },
+ "sp-saiga": {
+  "taxon": "Saiga tatarica",
+  "by": "Trent Sperry",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/fcb4f3e0-4bd8-416d-9466-edf91aafc77e",
+  "aspect": 1.341
+ },
+ "sp-orca": {
+  "taxon": "Orcinus orca",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/c8cbec13-a69c-40d8-836b-902a6b1defcf",
+  "aspect": 1.686
+ },
+ "sp-blauwal": {
+  "taxon": "Balaenoptera musculus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/6ca9f0b7-cacb-45cc-9229-1b672d55b15b",
+  "aspect": 3.303
+ },
+ "sp-finnwal": {
+  "taxon": "Balaenoptera physalus",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/8366482f-d41c-4ab2-8403-3d70fb04ad5f",
+  "aspect": 4.518
+ },
+ "sp-nordatlantischer-glattwal": {
+  "taxon": "Eubalaena glacialis",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/fb533874-aa63-4f76-baf0-e9ceacd7333c",
+  "aspect": 2.85
+ },
+ "sp-groenlandwal": {
+  "taxon": "Balaena mysticetus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/fdff3c1b-dd0a-44d5-9fd3-2ecda7939846",
+  "aspect": 3.413
+ },
+ "sp-pottwal": {
+  "taxon": "Physeter macrocephalus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/2756dc6c-79a4-4507-a486-3cc613671a54",
+  "aspect": 4.364
+ },
+ "sp-buckelwal": {
+  "taxon": "Megaptera novaeangliae",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/fd8d3e5e-24a0-4aa2-9211-987ff86007dd",
+  "aspect": 3.756
+ },
+ "sp-vaquita": {
+  "taxon": "Phocoena sinus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/4b2f3f8f-93f3-49e9-9a20-325e11602b7e",
+  "aspect": 2.481
+ },
+ "sp-hector-delfin": {
+  "taxon": "Cephalorhynchus hectori",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/0d20875b-a4cd-4b87-98ec-080aff1c2c38",
+  "aspect": 2.648
+ },
+ "sp-irawadi-delfin": {
+  "taxon": "Orcaella brevirostris",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/e513c0ec-d6ee-4adf-b46c-da3ea6d2b248",
+  "aspect": 2.564
+ },
+ "sp-schweinswal": {
+  "taxon": "Phocoena phocoena",
+  "by": "Matthew Schmitz",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/7b6a2a22-303f-4536-b5b8-52389232969a",
+  "aspect": 3.793
+ },
+ "sp-narwal": {
+  "taxon": "Monodon monoceros",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d2616332-2584-4504-a463-2bf6f9fc6412",
+  "aspect": 4.163
+ },
+ "sp-beluga": {
+  "taxon": "Delphinapterus leucas",
+  "by": "Xavier Giroux-Bougard",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/f1367ab1-40cf-4e9a-a84b-37508f11a7c7",
+  "aspect": 2.915
+ },
+ "sp-atlantischer-buckeldelfin": {
+  "taxon": "Sousa teuszii",
+  "by": "Chris huh",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/0bfb8134-7452-4434-9ca3-45a8fb778499",
+  "aspect": 2.893
+ },
+ "sp-dugong": {
+  "taxon": "Dugong dugon",
+  "by": "Matthew Speight",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5584723d-1756-48a0-8a0d-9bdb703d62ce",
+  "aspect": 2.994
+ },
+ "sp-karibik-manati": {
+  "taxon": "Trichechus",
+  "by": "Flurin Leugger",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/3f69e1ee-08bc-40d1-b4fd-75246024e2c6",
+  "aspect": 1.915
+ },
+ "sp-mittelmeer-moenchsrobbe": {
+  "taxon": "Monachus monachus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ab4c3d7b-3926-4a0a-a31b-edcabe2bbbcf",
+  "aspect": 2.753
+ },
+ "sp-hawaii-moenchsrobbe": {
+  "taxon": "Neomonachus schauinslandi",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a227a95e-76ec-4266-b25a-9dcb96226cd7",
+  "aspect": 1.229
+ },
+ "sp-galapagos-seeloewe": {
+  "taxon": "Zalophus wollebaeki",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/2359997c-aed8-466b-9b4e-6e5f233db1af",
+  "aspect": 1.336
+ },
+ "sp-stellerscher-seeloewe": {
+  "taxon": "Eumetopias jubatus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/02332aa9-5c09-40f4-aeb5-ff3dfc00702a",
+  "aspect": 1.298
+ },
+ "sp-seeotter": {
+  "taxon": "Enhydra lutris",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d1e9b847-ab06-4663-8095-c65c08bfe21e",
+  "aspect": 2.462
+ },
+ "sp-eisbaer": {
+  "taxon": "Ursus maritimus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/35fbff4d-c0e6-4c53-9f27-f0a6ecbe7720",
+  "aspect": 2.139
+ },
+ "sp-walhai": {
+  "taxon": "Rhincodon typus",
+  "by": "Christoph Schomburg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/07a435aa-0db6-4054-8854-2db3010c8162",
+  "aspect": 3.64
+ },
+ "sp-weisser-hai": {
+  "taxon": "Carcharodon carcharias",
+  "by": "Russell Engelman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/c50d0750-bd34-4c16-a6d9-d4e46d2b1d48",
+  "aspect": 2.289
+ },
+ "sp-grosser-hammerhai": {
+  "taxon": "Sphyrna mokarran",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/af51e4b5-39d6-4a39-8705-97799334b7f6",
+  "aspect": 2.738
+ },
+ "sp-bogenstirn-hammerhai": {
+  "taxon": "Sphyrna lewini",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5d6f65dd-4c32-47c1-ba2e-5ae5c62958dd",
+  "aspect": 0.326
+ },
+ "sp-riesenhai": {
+  "taxon": "Cetorhinus maximus",
+  "by": "Marina Vingiani",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/44d148c3-ee6a-495e-bd60-c113975e2c2c",
+  "aspect": 1.555
+ },
+ "sp-kurzflossen-mako": {
+  "taxon": "Isurus oxyrinchus",
+  "by": "Fidji Berio",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a807f354-fd7c-4547-a7e8-573f7ca75e63",
+  "aspect": 2.477
+ },
+ "sp-weissspitzen-hochseehai": {
+  "taxon": "Carcharhinus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/bd364451-6971-445d-88df-85162baf3f9c",
+  "aspect": 2.465
+ },
+ "sp-tigerhai": {
+  "taxon": "Galeocerdo cuvier",
+  "by": "Amy Beauvois",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/2e07c00d-1b73-4b6f-b3b5-63ade2c7909c",
+  "aspect": 1.718
+ },
+ "sp-groenlandhai": {
+  "taxon": "Somniosus microcephalus",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/50f67ea6-a922-4ede-a054-af9632cff470",
+  "aspect": 2.76
+ },
+ "sp-bullenhai": {
+  "taxon": "Carcharhinus leucas",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/bd364451-6971-445d-88df-85162baf3f9c",
+  "aspect": 2.465
+ },
+ "sp-riffmanta": {
+  "taxon": "Mobula alfredi",
+  "by": "Edwin Price",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/e41389c4-e2d6-4750-ad16-cf53704d7efb",
+  "aspect": 2.008
+ },
+ "sp-riesenmanta": {
+  "taxon": "Mobula birostris",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f3fa5012-3c60-4d0d-9f78-ffdeef367411",
+  "aspect": 1.445
+ },
+ "sp-grosser-saegefisch": {
+  "taxon": "Pristis pristis",
+  "by": "C. Camilo Julián-Caballero",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/bc78209e-0aea-4671-aa5c-a23509af2bf6",
+  "aspect": 2.979
+ },
+ "sp-engelhai": {
+  "taxon": "Squatina squatina",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/ff053b7d-4804-4fff-bf85-2c5faaad8a32",
+  "aspect": 0.544
+ },
+ "sp-bogenstirn-geigenrochen": {
+  "taxon": "Rhina",
+  "by": "Eloisa Pinheiro Giareta",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/52d9bc39-878e-4fb1-94b9-0663f4edc5d1",
+  "aspect": 1.564
+ },
+ "sp-glattrochen": {
+  "taxon": "Dipturus",
+  "by": "Ignacio Contreras",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
+  "page": "https://www.phylopic.org/images/010cc025-d27d-470a-b311-99a7ee081ea5",
+  "aspect": 1.407
+ },
+ "sp-lederschildkroete": {
+  "taxon": "Dermochelys coriacea",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/574846f0-48ac-4e37-ae0b-dbe00d37f21e",
+  "aspect": 1.284
+ },
+ "sp-echte-karettschildkroete": {
+  "taxon": "Eretmochelys imbricata",
+  "by": "James R. Spotila and Ray Chatterji",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/f38583f2-b978-4bfe-afba-7bcd18efac60",
+  "aspect": 1.567
+ },
+ "sp-gruene-meeresschildkroete": {
+  "taxon": "Chelonia mydas",
+  "by": "Edwin Price",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/50e1a03c-3ea4-4a22-9a9e-5949a099769d",
+  "aspect": 1.949
+ },
+ "sp-unechte-karettschildkroete": {
+  "taxon": "Caretta caretta",
+  "by": "Caleb M. Gordon",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d3c269f4-05cf-4c22-9a71-8d6912fe50ec",
+  "aspect": 1.356
+ },
+ "sp-atlantik-bastardschildkroete": {
+  "taxon": "Lepidochelys kempii",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/8d41fc93-8bf3-4bfe-a937-c3a74378875b",
+  "aspect": 1.197
+ },
+ "sp-oliv-bastardschildkroete": {
+  "taxon": "Lepidochelys olivacea",
+  "by": "(after Spotila 2004)",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/4308027d-b3f6-4b28-80fe-84671e3c8b1d",
+  "aspect": 1.69
+ },
+ "sp-roter-thun": {
+  "taxon": "Thunnus thynnus",
+  "by": "Russell Engelman",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/2f5a51b3-fc80-4fe4-be36-549cb36c97a7",
+  "aspect": 2.818
+ },
+ "sp-kabeljau": {
+  "taxon": "Gadus morhua",
+  "by": "Alexandra Hahn",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/483fe84e-23fb-4098-8cbf-9ba2d7e6b779",
+  "aspect": 2.699
+ },
+ "sp-europaeischer-aal": {
+  "taxon": "Anguilla anguilla",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/a3104d25-d759-46c5-b01a-f7103ede445f",
+  "aspect": 9.54
+ },
+ "sp-napoleon-lippfisch": {
+  "taxon": "Cheilinus",
+  "by": "Kent Sorgon",
+  "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://www.phylopic.org/images/c90aa49b-d9c5-44a4-a709-4f8d9a33b559",
+  "aspect": 1.827
+ },
+ "sp-riesenzackenbarsch": {
+  "taxon": "Epinephelus itajara",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/467fc74c-18bf-47fb-8227-3b544e4652b9",
+  "aspect": 2.169
+ },
+ "sp-mondfisch": {
+  "taxon": "Mola mola",
+  "by": "Caleb Gordon",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/d9cac44e-06e8-4658-abdb-5ee9b9cfc812",
+  "aspect": 0.942
+ },
+ "sp-quastenflosser": {
+  "taxon": "Latimeria chalumnae",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/9785c4ca-e881-4e42-b359-212dd9c38aee",
+  "aspect": 1.889
+ },
+ "sp-europaeischer-stoer": {
+  "taxon": "Acipenser",
+  "by": "Duane Raver/USFWS",
+  "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "page": "https://www.phylopic.org/images/5ce55e7c-827d-4049-b128-ae0bc8fb2981",
+  "aspect": 4.531
+ },
+ "sp-knysna-seepferdchen": {
+  "taxon": "Hippocampus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/6cf73e55-4e10-47ad-9b7e-33645536863f",
+  "aspect": 0.611
+ },
+ "sp-elchgeweihkoralle": {
+  "taxon": "Acropora palmata",
+  "by": "Victor Piñon-González",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/32eeaa29-2e90-40b5-92fb-eb8d7fcab9ab",
+  "aspect": 1.126
+ },
+ "sp-hirschgeweihkoralle": {
+  "taxon": "Acropora cervicornis",
+  "by": "James St. John and T. Michael Keesey",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/918e22ea-53d9-4318-879d-1a3126968157",
+  "aspect": 0.791
+ },
+ "sp-riesenmuschel": {
+  "taxon": "Tridacna",
+  "by": "Jimmy Bernot",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/fe233431-4014-4612-8ee6-eb1060b7eaa5",
+  "aspect": 1.391
+ },
+ "sp-perlboot": {
+  "taxon": "Nautilus pompilius",
+  "by": "Margot Michaud",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/a5d0c0e8-c737-40c3-8f5d-dbca473e1c33",
+  "aspect": 1.146
+ },
+ "sp-sonnenblumen-seestern": {
+  "taxon": "Pycnopodia helianthoides",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/be5c73aa-407f-4a6f-b7ec-6061bec99d86",
+  "aspect": 0.91
+ },
+ "sp-schwarzes-seeohr": {
+  "taxon": "Haliotis cracherodii",
+  "by": "Nikolas J. Kaplanis",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/7f5b9a1c-250e-42b5-9a7d-4f9b537ac8d9",
+  "aspect": 1.03
+ },
+ "sp-pfeilschwanzkrebs": {
+  "taxon": "Limulus polyphemus",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/9a9a0cd0-2fb0-4ab7-b0bc-5984d11e5c13",
+  "aspect": 1.866
+ },
+ "sp-europaeische-auster": {
+  "taxon": "Ostrea",
+  "by": "Filippo Nicolini",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/5c9b3625-0f13-4823-b7c0-57dd90feb344",
+  "aspect": 1.003
+ },
+ "sp-wanderalbatros": {
+  "taxon": "Diomedea exulans",
+  "by": "Alexandre Vong",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d1e7e88d-20fb-4d4c-8a3e-b3417c392291",
+  "aspect": 0.837
+ },
+ "sp-galapagos-pinguin": {
+  "taxon": "Spheniscus mendiculus",
+  "by": "Edwin Price",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/7a5d724f-42f4-4f1f-ad71-263e0afebcc8",
+  "aspect": 0.516
+ },
+ "sp-brillenpinguin": {
+  "taxon": "Spheniscus demersus",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/5be07a14-a575-4de5-8624-2aa3c6cebb4c",
+  "aspect": 1.512
+ },
+ "sp-kaiserpinguin": {
+  "taxon": "Aptenodytes forsteri",
+  "by": "Edwin Price",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "page": "https://www.phylopic.org/images/9e11df09-bd24-463a-9020-bdce4111537f",
+  "aspect": 0.585
+ },
+ "sp-balearen-sturmtaucher": {
+  "taxon": "Puffinus",
+  "by": "PhyloPic",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/bc4a8806-14e3-454b-8580-7063a5ea76ff",
+  "aspect": 0.706
+ },
+ "sp-papageitaucher": {
+  "taxon": "Fratercula arctica",
+  "by": "Ferran Sayol",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/18ff6244-3ec9-4750-a29a-aaad7e2f14ad",
+  "aspect": 0.654
+ },
+ "sp-tristanalbatros": {
+  "taxon": "Diomedea",
+  "by": "Kimberly Haddrell",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/782009b8-e3e8-4cb5-a6a9-a0a06bafa50d",
+  "aspect": 1.567
+ },
+ "sp-humboldtpinguin": {
+  "taxon": "Spheniscus humboldti",
+  "by": "Andy Wilson",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/d10ef5a9-f85e-423f-8d00-8e62ecaebfeb",
+  "aspect": 0.704
+ },
+ "sp-kurzschwanzalbatros": {
+  "taxon": "Phoebastria",
+  "by": "Juan Carlos Jerí",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "page": "https://www.phylopic.org/images/05c6c57c-7c64-4a51-921a-fd46d066ab91",
+  "aspect": 0.895
  }
 }

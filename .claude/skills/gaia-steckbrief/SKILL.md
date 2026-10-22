@@ -81,6 +81,12 @@ npm run data       # alle Datenpakete neu erzeugen (scripts/)
   - `src/lib/wiki.ts` – Wikipedia-Vorschaubild + Commons-Urheber/Lizenz (URL-Parameter `?utm_…` abschneiden!).
   - Debug: `window.__gaia.globe`, `window.__gaiaSites` (aktuelle Fundorte).
   - Inhalte wurden von 4 parallelen Subagenten geschrieben (je 25 Tiere, festes Schema) – bewährtes Muster für Phase 3 (150 Tiere) und Phase 4 (150 Kriege).
-- Offen: Code-Lizenz (wichtig vor Phase 4 wegen GPL-Grenzdaten). Nächste Phase: 3 Tiere heute (bedrohte Arten, viele Meerestiere).
+- 2026-10-23 **Phase 3 „Tiere heute“ fertig** – in der Tierwelt ab Regler ≤ 1000 n. Chr. (`MODERN_MA`) statt Fossilien:
+  - `src/content/species/` – `types.ts` (`Species`, Rote-Liste `RedList`), 5 Dateien (`sea-mammals-sharks` 38, `sea-other` 36, `land-mammals` 40, `birds-reptiles-freshwater` 36, `extinct` 20 = 170 Arten, 74 im Meer), `index.ts` (SPECIES, STATUS-Farben, REALM, TREND, `aliveIn(s, year)`). Ausgestorbene erscheinen bis zu ihrem `extinct`-Jahr. Prüfen mit `node scripts/check-species.mjs` (gleicht Status mit der en-Taxobox ab; bekannte, gewollte Abweichungen: Monarchfalter VU = Unterart, Baiji „PE“).
+  - `src/globe/species.ts` – GBIF-Raster + kuratierte `range`-Kreise → `Globe.setAreas()` (weiche Leuchtflecken, Farbe nach Lebensraum).
+  - `src/components/SpeciesViews.tsx` – `ModernTab` (Filter Lebensraum/Status, „Schon ausgestorben“), `SpeciesCard` (Bestand, Trend, Bedrohungen/Was hilft bzw. Warum verschwunden/Was wir lernen, Urzeit-Verwandte → Creature). Lexikon hat Umschalter Urzeit/Heute.
+  - Silhouetten der Arten unter `sp-<id>` (153 von 170; ohne Silhouette kein Größenvergleich).
+  - Bundle jetzt ~1,4 MB (gzip 430 KB), weil alle Inhalte im Hauptpaket liegen → vor/mit Phase 4 Inhalte per `import()` nachladen.
+- Offen: Code-Lizenz (wichtig vor Phase 4 wegen GPL-Grenzdaten). Nächste Phase: 4 Menschen (Grenzen über die Zeit, 150 Kriege).
 
 (Nach jeder Phase hier ergänzen: was gebaut ist, Routen, offene Punkte, neue Fallen.)

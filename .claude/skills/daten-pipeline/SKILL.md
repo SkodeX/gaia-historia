@@ -41,7 +41,12 @@ Endpunkte unten wurden am 2026-10-22 geprüft. Teste neue Abfragen erst mit klei
 - Für Phase 2 Funde zur Build-Zeit holen, auf Gattung zusammenfassen, Position auf 0,5° runden, doppelte Sammlungen zusammenlegen; je Zeitpunkt nur, was `lag ≤ t ≤ eag` erfüllt (im Browser filtern).
 - Kuratierte Star-Dinos: eigene TS-Datensätze in `src/content/dinos.ts` mit PBDB-Taxon-ID als Brücke zu den Funden.
 
-## 3. Bedrohte Arten heute – GBIF
+## 3a. GEBAUT (Phase 3): Verbreitung heutiger Arten
+
+- `scripts/build-species.mjs` (`npm run species`, ~2 min, 6 parallel): GBIF `species/match` → `usageKey`, dann **Maps API** statt Suche (die Suche liefert nur 300 gehäufte Datensätze): `https://api.gbif.org/v2/map/occurrence/density/0/{0,1}/0@1x.png?srs=EPSG:4326&taxonKey=…&basisOfRecord=…` – zwei 512-px-Kacheln, je 180°. PNG mit `pngjs` dekodieren, Bildpunkte mit Alpha > 0 auf 2°-Raster zählen, einzelne isolierte Pixel verwerfen. Status 204 = keine Daten. Ausgestorbene Arten werden übersprungen (nur kuratierte `range`-Kreise). Ausgabe `public/data/species.json` (~340 KB) `{ranges: {id: [lon, lat, gewicht, …]}}`.
+- Wikipedia-API drosselt bei vielen Einzelabfragen (auch Subagenten trafen das Limit) → Titel/Status immer gebündelt prüfen (`titles=` mit bis zu 50, `prop=revisions` für Taxobox-Status), wie in `check-species.mjs`.
+
+## 3. Bedrohte Arten heute – GBIF (ursprünglicher Plan)
 
 - Name → Schlüssel: `https://api.gbif.org/v1/species/match?name=<Art>` → `usageKey` (CORS `*`).
 - Verbreitung: Vorkommen zur Build-Zeit über `https://api.gbif.org/v1/occurrence/search?taxonKey=<key>&hasCoordinate=true&hasGeospatialIssue=false&limit=300` in mehreren Seiten holen und auf ein Raster (z. B. 1°) aggregieren; Ausreißer (Zoos: `basisOfRecord=LIVING_SPECIMEN`) ausschließen.

@@ -10,7 +10,9 @@ import { atmosphereColor, paintEarth, type Stage } from '../globe/paint';
 import { CAT_COLORS, EVENTS, type EarthEvent } from '../content/events';
 import { CITIES } from '../content/places';
 import geoPoints from '../content/geo-points.json';
-import { maToPos, posToMa } from '../time/scale';
+import { maToPos, maToYear, posToMa, yearToMa } from '../time/scale';
+import { MODERN_MA, REALM, SPECIES, STATUS, aliveIn, type Species } from '../content/species';
+import { loadRanges, speciesArea } from '../globe/species';
 import { fossilsAt, loadFossils, siteAt, sitesOfGenus, type FossilData, type FossilSite } from '../globe/fossils';
 import { CREATURES, groupInfo, isAlive, type Creature } from '../content/creatures';
 
@@ -44,6 +46,10 @@ export function EarthView({ mode }: { mode: Mode }) {
   const [highlight, setHighlight] = useState<number | null>(null);
   const [stats, setStats] = useState({ sites: 0, genera: 0 });
   const sitesRef = useRef<FossilSite[]>([]);
+  // Heutige Arten
+  const [species, setSpecies] = useState<Species | null>(null);
+  const [ranges, setRanges] = useState<Awaited<ReturnType<typeof loadRanges>> | null>(null);
+  const modern = ma <= MODERN_MA;
 
   useEffect(() => {
     const globe = new Globe(hostRef.current!);
@@ -62,6 +68,22 @@ export function EarthView({ mode }: { mode: Mode }) {
   useEffect(() => {
     if (mode === 'life' && !fossils) loadFossils().then(setFossils, () => setFailed(true));
   }, [mode, fossils]);
+  useEffect(() => {
+    if (mode === 'life' && modern && !ranges) loadRanges().then(setRanges, () => undefined);
+  }, [mode, modern, ranges]);
+
+  // Verbreitungsgebiet der gewählten Art leuchten lassen
+  useEffect(() => {
+    const globe = globeRef.current;
+    if (!globe) return;
+    const year = Math.round(maToYear(ma));
+    if (mode !== 'life' || !species || !modern || !aliveIn(species, year)) {
+      globe.setAreas([]);
+      return;
+    }
+    // Fläche nach Lebensraum färben (Meer blau, Land grün) – der Status steht im Abzeichen
+    globe.setAreas(speciesArea(species, ranges, REALM[species.realm].color));
+  }, [mode, species, ranges, modern, ma]);
 
   // Höhe des Zeitreglers als CSS-Variable, damit das Info-Panel auf dem Handy direkt darüber sitzt
   const earthRef = useRef<HTMLDivElement>(null);
@@ -174,8 +196,25 @@ export function EarthView({ mode }: { mode: Mode }) {
         list.push({ id: `star-${c.id}`, lon: p[0], lat: p[1], el: e });
       }
     }
+    if (mode === 'life' && modern) {
+      const year = Math.round(maToYear(ma));
+      for (const sp of SPECIES) {
+        if (!aliveIn(sp, year)) continue;
+        const e = el(`sp-${sp.id}`, () => {
+          const b = document.createElement('button');
+          b.className = 'marker species';
+          b.innerHTML = '<span class="star-dot"></span><span class="marker-label"></span>';
+          return b;
+        });
+        e.style.setProperty('--c', STATUS[sp.status].color);
+        e.classList.toggle('selected', species?.id === sp.id);
+        e.querySelector('.marker-label')!.textContent = sp.name[lang];
+        e.onclick = () => selectSpeciesRef.current(sp);
+        list.push({ id: `sp-${sp.id}`, lon: sp.home[1], lat: sp.home[0], el: e });
+      }
+    }
     globe.setMarkers(list);
-  }, [ma, data, lang, settings.showCities, settings.showEvents, mode, fossils, stats]);
+  }, [ma, data, lang, settings.showCities, settings.showEvents, mode, fossils, stats, modern, species]);
 
   // Fossilfunde als leuchtende Punkte
   useEffect(() => {
@@ -237,10 +276,27 @@ export function EarthView({ mode }: { mode: Mode }) {
     },
     [fossils, data, ma],
   );
+  // Art wählen: bei Bedarf in eine Zeit springen, in der sie lebte, und hinfliegen
+  const selectSpecies = useCallback(
+    (sp: Species | null) => {
+      setPicked(null);
+      setCreature(null);
+      setHighlight(null);
+      setSpecies(sp);
+      if (!sp) return;
+      const year = Math.round(maToYear(ma));
+      if (ma > MODERN_MA || !aliveIn(sp, year)) setMa(sp.extinct !== undefined ? yearToMa(Math.max(1000, sp.extinct - 5)) : 0);
+      globeRef.current?.flyTo(sp.home[1], sp.home[0]);
+    },
+    [ma],
+  );
+  const selectSpeciesRef = useRef(selectSpecies);
+  selectSpeciesRef.current = selectSpecies;
   const hasSites = useCallback((c: Creature) => fossils?.stars[c.id] !== undefined, [fossils]);
   const selectCreature = useCallback(
     (c: Creature | null) => {
       setPicked(null);
+      setSpecies(null);
       setCreature(c);
       if (!c) setHighlight(null);
       else if (fossils?.stars[c.id] !== undefined) setHighlight(fossils.stars[c.id]);
@@ -279,6 +335,8 @@ export function EarthView({ mode }: { mode: Mode }) {
           onJump={jump}
           onShowSites={showSites}
           hasSites={hasSites}
+          species={species}
+          onSelectSpecies={selectSpecies}
         />
       )}
       <TimeBar ma={ma} onChange={setMa} />

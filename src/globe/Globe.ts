@@ -71,10 +71,19 @@ void main() {
   gl_FragColor = vec4(mix(vColor, vec3(1.0), core * 0.55), max(core, glow));
 }`;
 
+const AREA_FRAGMENT = `
+varying vec3 vColor;
+void main() {
+  float d = length(gl_PointCoord - 0.5) * 2.0;
+  if (d > 1.0) discard;
+  gl_FragColor = vec4(vColor, pow(1.0 - d, 1.6) * 0.32);
+}`;
+
 export class Globe {
   /** Wird beim Antippen der Kugel (ohne Ziehen) mit lon/lat und einer Toleranz in Grad aufgerufen */
   onPick: ((lon: number, lat: number, tolDeg: number) => void) | null = null;
   private points: THREE.Points<THREE.BufferGeometry, THREE.ShaderMaterial>;
+  private areas: THREE.Points<THREE.BufferGeometry, THREE.ShaderMaterial>;
   private raycaster = new THREE.Raycaster();
   private downAt: { x: number; y: number } | null = null;
   readonly canvas: HTMLCanvasElement;
@@ -169,6 +178,21 @@ export class Globe {
     );
     this.points.frustumCulled = false;
     this.scene.add(this.points);
+
+    // Weiche, große Punkte für Verbreitungsgebiete („leuchtende Fläche“)
+    this.areas = new THREE.Points(
+      new THREE.BufferGeometry(),
+      new THREE.ShaderMaterial({
+        vertexShader: POINT_VERTEX,
+        fragmentShader: AREA_FRAGMENT,
+        uniforms: this.points.material.uniforms,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      }),
+    );
+    this.areas.frustumCulled = false;
+    this.scene.add(this.areas);
 
     // Antippen erkennen: Zeiger kaum bewegt zwischen Drücken und Loslassen
     const el = this.labels.domElement;
@@ -268,18 +292,27 @@ export class Globe {
 
   /** Leuchtende Punkte (z. B. Fossilfunde) knapp über der Oberfläche */
   setPoints(list: GlowPoint[]) {
+    this.fill(this.points, list, 1.004);
+  }
+
+  /** Weiche Leuchtflächen (z. B. Verbreitungsgebiete) – size ist der Durchmesser eines Flecks in Bildpunkten */
+  setAreas(list: GlowPoint[]) {
+    this.fill(this.areas, list, 1.002);
+  }
+
+  private fill(target: THREE.Points<THREE.BufferGeometry, THREE.ShaderMaterial>, list: GlowPoint[], radius: number) {
     const pos = new Float32Array(list.length * 3);
     const col = new Float32Array(list.length * 3);
     const size = new Float32Array(list.length);
     const c = new THREE.Color();
     list.forEach((p, i) => {
-      const v = lonLatToVec3(p.lon, p.lat, 1.004);
+      const v = lonLatToVec3(p.lon, p.lat, radius);
       pos.set([v.x, v.y, v.z], i * 3);
       c.set(p.color);
       col.set([c.r, c.g, c.b], i * 3);
       size[i] = p.size;
     });
-    const g = this.points.geometry;
+    const g = target.geometry;
     g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
     g.setAttribute('color', new THREE.BufferAttribute(col, 3));
     g.setAttribute('size', new THREE.BufferAttribute(size, 1));

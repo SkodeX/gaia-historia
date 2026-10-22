@@ -6,6 +6,9 @@ import { wikiImage, type WikiImage } from '../lib/wiki';
 import { formatMa, formatNumber } from '../time/format';
 import { AgeTab } from './InfoPanel';
 import type { Lang } from '../state/settings';
+import { MODERN_MA, type Species } from '../content/species';
+import { ModernTab, SpeciesCard } from './SpeciesViews';
+import { NOW_YEAR, maToYear } from '../time/scale';
 
 type Tab = 'alive' | 'lexicon' | 'age';
 
@@ -29,16 +32,19 @@ interface Props {
   onJump: (ma: number) => void;
   onShowSites: (c: Creature) => void;
   hasSites: (c: Creature) => boolean;
+  species: Species | null;
+  onSelectSpecies: (s: Species | null) => void;
 }
 
 export function LifePanel(props: Props) {
   const { t } = useI18n();
-  const { ma, selected, fossil } = props;
+  const { ma, selected, fossil, species } = props;
+  const modern = ma <= MODERN_MA;
   const [tab, setTab] = useState<Tab>('alive');
   const [open, setOpen] = useState(() => window.innerWidth > 760);
   useEffect(() => {
-    if (selected || fossil) setOpen(true);
-  }, [selected, fossil]);
+    if (selected || fossil || species) setOpen(true);
+  }, [selected, fossil, species]);
 
   return (
     <aside className={`info ${open ? 'open' : 'closed'}`}>
@@ -48,15 +54,16 @@ export function LifePanel(props: Props) {
             key={k}
             role="tab"
             aria-selected={tab === k && open}
-            className={`info-tab ${tab === k && open && !selected && !fossil ? 'active' : ''}`}
+            className={`info-tab ${tab === k && open && !selected && !fossil && !species ? 'active' : ''}`}
             onClick={() => {
               setTab(k);
               setOpen(true);
               props.onSelect(null);
               props.onFossilClose();
+              props.onSelectSpecies(null);
             }}
           >
-            {t(`life.tab.${k}`)}
+            {k === 'alive' && modern ? t('life.tab.today') : t(`life.tab.${k}`)}
           </button>
         ))}
         <button className="icon-btn info-toggle" onClick={() => setOpen(!open)} aria-label={open ? t('panel.close') : t('panel.open')}>
@@ -65,14 +72,16 @@ export function LifePanel(props: Props) {
       </div>
       {open && (
         <div className="info-body">
-          {selected ? (
+          {species ? (
+            <SpeciesCard s={species} onClose={() => props.onSelectSpecies(null)} onCreature={props.onSelect} />
+          ) : selected ? (
             <CreatureCard c={selected} {...props} />
           ) : fossil ? (
             <FossilCard f={fossil} onClose={props.onFossilClose} onSelect={props.onSelect} />
           ) : tab === 'alive' ? (
-            <AliveTab {...props} />
+            modern ? <ModernTab year={Math.round(maToYear(ma))} onSelect={props.onSelectSpecies} /> : <AliveTab {...props} />
           ) : tab === 'lexicon' ? (
-            <Lexicon onSelect={props.onSelect} />
+            <Lexicon onSelect={props.onSelect} onSelectSpecies={props.onSelectSpecies} startToday={modern} />
           ) : (
             <AgeTab ma={ma} />
           )}
@@ -107,8 +116,9 @@ function AliveTab({ ma, siteCount, generaCount, onSelect }: Props) {
   );
 }
 
-function Lexicon({ onSelect }: { onSelect: (c: Creature) => void }) {
+function Lexicon({ onSelect, onSelectSpecies, startToday }: { onSelect: (c: Creature) => void; onSelectSpecies: (s: Species) => void; startToday: boolean }) {
   const { t, lang } = useI18n();
+  const [today, setToday] = useState(startToday);
   const [q, setQ] = useState('');
   const [group, setGroup] = useState<CreatureGroup | null>(null);
   const list = useMemo(() => {
@@ -117,8 +127,26 @@ function Lexicon({ onSelect }: { onSelect: (c: Creature) => void }) {
       (c) => (!group || c.group === group) && (!s || c.name[lang].toLowerCase().includes(s) || c.genus.toLowerCase().includes(s) || c.meaning?.[lang].toLowerCase().includes(s)),
     );
   }, [q, group, lang]);
+  const toggle = (
+    <div className="seg-toggle">
+      <button className={!today ? 'active' : ''} onClick={() => setToday(false)}>
+        {t('life.lexPre')}
+      </button>
+      <button className={today ? 'active' : ''} onClick={() => setToday(true)}>
+        {t('life.lexToday')}
+      </button>
+    </div>
+  );
+  if (today)
+    return (
+      <div className="lexicon">
+        {toggle}
+        <ModernTab year={NOW_YEAR} onSelect={onSelectSpecies} search />
+      </div>
+    );
   return (
     <div className="lexicon">
+      {toggle}
       <label className="search">
         <Search size={15} />
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t('life.search')} />
@@ -157,8 +185,8 @@ function CreatureList({ list, lang, onSelect, showTime }: { list: Creature[]; la
   );
 }
 
-const fmtLen = (m: number, lang: Lang) => (m < 1 ? `${formatNumber(m * 100, lang, 0)} cm` : `${formatNumber(m, lang, 1)} m`);
-const fmtWeight = (kg: number, lang: Lang) =>
+export const fmtLen = (m: number, lang: Lang) => (m < 1 ? `${formatNumber(m * 100, lang, 0)} cm` : `${formatNumber(m, lang, 1)} m`);
+export const fmtWeight = (kg: number, lang: Lang) =>
   kg >= 1000 ? `${formatNumber(kg / 1000, lang, kg >= 10000 ? 0 : 1)} t` : kg < 1 ? `${formatNumber(kg * 1000, lang, 0)} g` : `${formatNumber(kg, lang, 0)} kg`;
 
 function CreatureCard({ c, ma, onSelect, onJump, onShowSites, hasSites }: { c: Creature } & Props) {
@@ -215,7 +243,7 @@ function CreatureCard({ c, ma, onSelect, onJump, onShowSites, hasSites }: { c: C
         </div>
       </dl>
 
-      <SizeCompare c={c} />
+      <SizeCompare silId={c.id} length={c.length} taxon={c.pbdb ?? c.genus} />
 
       <h4 className="facts-h">{t('life.facts')}</h4>
       <ul className="facts">
@@ -256,7 +284,7 @@ function CreatureCard({ c, ma, onSelect, onJump, onShowSites, hasSites }: { c: C
   );
 }
 
-function WikiPicture({ title, lang, alt }: { title: string; lang: Lang; alt: string }) {
+export function WikiPicture({ title, lang, alt }: { title: string; lang: Lang; alt: string }) {
   const { t } = useI18n();
   const [img, setImg] = useState<WikiImage | null | undefined>(undefined);
   useEffect(() => {
@@ -312,21 +340,21 @@ const loadSilhouettes = () =>
     .catch(() => ({})));
 
 /** Größenvergleich: Silhouette des Tiers neben einem 1,8 m großen Menschen */
-function SizeCompare({ c }: { c: Creature }) {
+export function SizeCompare({ silId, length, taxon }: { silId: string; length: number; taxon: string }) {
   const { t, lang } = useI18n();
   const [index, setIndex] = useState<Record<string, SilhouetteInfo> | null>(null);
   useEffect(() => {
     loadSilhouettes().then(setIndex);
   }, []);
-  const s = index?.[c.id];
+  const s = index?.[silId];
   const human = index?.human;
   if (!index || !s) return null;
   const base = `${import.meta.env.BASE_URL}data/silhouettes/`;
   const humanH = 1.8;
   const humanW = humanH * (human?.aspect ?? 0.35);
   // Die längere Seite der Silhouette entspricht der angegebenen Länge (Seitenansicht oder stehendes Tier)
-  const animalW = s.aspect >= 1 ? c.length : c.length * s.aspect;
-  const animalH = s.aspect >= 1 ? c.length / s.aspect : c.length;
+  const animalW = s.aspect >= 1 ? length : length * s.aspect;
+  const animalH = s.aspect >= 1 ? length / s.aspect : length;
   // Maßstab: beides passt in 100 % Breite und 140 px Höhe
   const W = 300;
   const H = 140;
@@ -336,12 +364,12 @@ function SizeCompare({ c }: { c: Creature }) {
     <figure className="size-compare">
       <div className="size-stage" style={{ height: `${H}px` }}>
         {human && <span className="sil human" style={{ ...box(humanW, humanH), maskImage: `url(${base}human.svg)`, WebkitMaskImage: `url(${base}human.svg)` }} />}
-        <span className="sil animal" style={{ ...box(animalW, animalH), maskImage: `url(${base}${c.id}.svg)`, WebkitMaskImage: `url(${base}${c.id}.svg)` }} />
+        <span className="sil animal" style={{ ...box(animalW, animalH), maskImage: `url(${base}${silId}.svg)`, WebkitMaskImage: `url(${base}${silId}.svg)` }} />
       </div>
       <figcaption>
-        {t('life.compare', { len: fmtLen(c.length, lang) })} ·{' '}
+        {t('life.compare', { len: fmtLen(length, lang) })} ·{' '}
         <a href={s.page} target="_blank" rel="noreferrer">
-          {t('life.silhouette')}{s.taxon !== (c.pbdb ?? c.genus) && <> ({t('life.relative')} <i>{s.taxon}</i>)</>}: {s.by}
+          {t('life.silhouette')}{s.taxon !== taxon && <> ({t('life.relative')} <i>{s.taxon}</i>)</>}: {s.by}
         </a>
       </figcaption>
     </figure>
